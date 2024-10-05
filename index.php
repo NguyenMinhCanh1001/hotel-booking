@@ -22,19 +22,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                <a class="nav-link active me-2" aria-current="page" href="#">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Phòng</a>
+                <a class="nav-link me-2" href="#">Phòng</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cơ sở Vật chất</a>
+                <a class="nav-link me-2" href="#">Cơ sở Vật chất</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Liên hệ</a>
+                <a class="nav-link me-2" href="#">Liên hệ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">giới thiệu</a>
+                <a class="nav-link me-2" href="#">Giới thiệu</a>
               </li>
             </ul>
             <div class="d-flex">
