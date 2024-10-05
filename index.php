@@ -9,31 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap" rel="stylesheet">
-<style>
-  .poppins-regular {
-    font-family: "Poppins", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", system-ui;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", system-ui;
-    font-weight: 600;
-    font-style: normal;
-  }
-  .merienda-header {
-    font-family: "Merienda", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     
