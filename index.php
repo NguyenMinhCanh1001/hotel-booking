@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,11 +40,43 @@
               </li>
             </ul>
             <div class="d-flex">
-              <button class="btn btn-outline-success" type="submit">Tìm Kiếm</button>
+              <button type="button" class="btn btn btn-outline-primary shadow-none me-lg-3 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                đăng nhập
+              </button>
             </div>
           </div>
         </div>
       </nav>
+
+      <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center">
+            <i class="bi bi-person fs-3 me-2"></i>
+             Đăng nhập tài khoản
+            </h5>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Emali đăng nhập</label>
+            <input type="email" class="form-control shadow-none">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mật khẩu</label>
+            <input type="password" class="form-control shadow-none">
+        </div>
+        <di>
+          <button class="btn btn-outline-dark">Đăng Nhập</button>
+        </di>
+      </div>
+    </form>
+   
+    </div>
+  </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
