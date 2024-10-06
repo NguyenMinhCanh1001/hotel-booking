@@ -41,7 +41,7 @@
             </ul>
             <div class="d-flex">
               <button type="button" class="btn btn-outline-light shadow-none me-lg-3 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
-                đăng nhập
+                Đăng nhập
               </button>
             </div>
           </div>
