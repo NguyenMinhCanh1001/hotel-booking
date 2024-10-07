@@ -39,6 +39,7 @@
                 <a class="nav-link me-2 text-white" href="#">Giới thiệu</a>
               </li>
             </ul>
+
             <div class="d-flex">
               <button type="button" class="btn btn-outline-light shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
                 Đăng nhập
@@ -84,7 +85,7 @@
 </div>
 
   <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <form>
           <div class="modal-header">
@@ -117,8 +118,8 @@
           <div class="container-fluid">
             <div class="row">
             <div class="col-md-6 ps-0 mb-3">
-            <label class="form-label">số điện thoại</label>
-            <input type="text" class="form-control shadow-none">
+            <label class="form-label">Số điện thoại</label>
+            <input type="number" class="form-control shadow-none">
             </div>
             <div class="col-md-6 p-0">
             <label class="form-label">Ảnh của bạn</label>
@@ -126,18 +127,33 @@
             </div>
           </div>
           </div>
+          <div class="mb-3">
+            <label class="form-label">Địa chỉ</label>
+            <textarea class="form-control shadow-none" rows="1"></textarea>
         </div>
-            <!-- <div class="mb-3">
-          
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6 ps-0 mb-3">
+            <label class="form-label">Pincode</label>
+            <input type="number" class="form-control shadow-none">
+            </div>
+            <div class="col-md-6 p-0">
+            <label class="form-label">Ngày sinh</label>
+            <input type="date" class="form-control shadow-none">
+            </div>
+            <div class="col-md-6 ps-0 mb-3">
+            <label class="form-label">Mật Khẩu</label>
+            <input type="password" class="form-control shadow-none">
+            </div>
+            <div class="col-md-6 p-0">
+            <label class="form-label">Nhập lại mật khẩu</label>
+            <input type="password" class="form-control shadow-none">
+            </div>
           </div>
-          <div class="mb-4">
-              <label class="form-label">Mật khẩu</label>
-              <input type="password" class="form-control shadow-none">
           </div>
-          <div class="d-flex align-items-center justify-content-between">
-            <button type="submit" class="btn btn-outline-dark shadown">Đăng Nhập</button>
-            <a href="javascript: void(0)" class="text-secondary text-decoration-none">Quên mật khẩu?</a>
-          </div> -->
+          <div class="text-center my-1">
+          <button type="submit" class="btn btn-outline-dark shadown">Đăng kí</button>
+        </div>
         </div>
       </form>
     
