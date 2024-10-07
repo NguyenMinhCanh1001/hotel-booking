@@ -12,8 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body>
+<body class="bg-light">
     
     <nav class="navbar navbar-expand-lg navbar-light bg-dark px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
@@ -160,7 +161,42 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid px-lg-4 mt-4">
+  <div class="swiper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/images/AnhBia/1.webp" class="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/AnhBia/2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/AnhBia/3.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/AnhBia/4.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/AnhBia/5.jpg" />
+      </div>
+    </div>
+  </div>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+    <script>
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction:false,
+      }
+    });
+  </script>
 </body>
 </html>

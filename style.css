@@ -36,4 +36,14 @@
   input[type=number] {
     -moz-appearance: textfield;
   }
+  .swiper-slide img {
+    width: 100%;
+    height: 500px; 
+}
+@media (max-width: 768px) {
+  .swiper-slide img {
+      height: 200px; 
+  }
+}
+
 
