@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body class="bg-light">
@@ -201,7 +201,7 @@
             <input type="date" class="form-control shadow-none">
           </div>
           <div class="col-lg-3 mb-3">
-          <label class="form-label" style="font-weight: 500">người lớn</label>
+          <label class="form-label" style="font-weight: 500">Người lớn</label>
           <select class="form-select shadow-none" >
             <option value="1">One</option>
             <option value="2">Two</option>
