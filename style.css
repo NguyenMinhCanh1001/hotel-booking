@@ -38,11 +38,28 @@
   }
   .swiper-slide img {
     width: 100%;
-    height: 500px; 
+    height: 460px; 
 }
 @media (max-width: 768px) {
   .swiper-slide img {
       height: 200px; 
+  }
+}
+.custom-bg{
+  background-color: #66BB6A;
+}
+.custom-bg:hover{
+  background-color: #388E3C;
+}
+.availability-form{
+  margin-top: -50px; 
+  z-index: 2;
+  position: relative ;
+}
+@media screen and (max-width: 575px){
+  .availability-form{
+    margin-top: 0px; 
+    padding: 0 35px;
   }
 }
 
