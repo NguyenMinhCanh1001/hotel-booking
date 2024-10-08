@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body class="bg-light">
@@ -282,6 +282,170 @@
           </div>
         </div>
       </div>
+      <div class="col-lg-4 col-md-6 my-3">
+      <div class="card border-0 shadow" style="max-width: 350px; margin: auto;  ">
+        <img src="/images/Phong/1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 >Phòng bình dân</h5>
+            <h6 class="mb-3">300.000 VND/đêm</h6>
+            <div class="features mb-4">
+              <h6 class="mb-1">Điểm đặc trưng
+              </h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 phòng ngủ  
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                1 ban công
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 phòng tắm  
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 ghế tình yêu
+              </span>
+            </div>
+            <div class="facilities mb-4">
+            <h6 class="mb-1">Tiện nghi</h6>
+            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Wife 
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Tivi
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Điều hòa
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Cách âm
+              </span>
+              </div>
+              <div class="rating mb-4">
+              <h6 class="mb-1">Đánh giá</h6>
+              <span class="badge rounded-pill bg-light">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+            </span>
+              </div>
+              <div class="d-flex justify-content-evenly mb-2">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                <a href="#" class="btn btn-sm btn btn-outline-primary shadow-none ">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 my-3">
+      <div class="card border-0 shadow" style="max-width: 350px; margin: auto;  ">
+        <img src="/images/Phong/1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 >Phòng bình dân</h5>
+            <h6 class="mb-3">300.000 VND/đêm</h6>
+            <div class="features mb-4">
+              <h6 class="mb-1">Điểm đặc trưng
+              </h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 phòng ngủ  
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                1 ban công
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 phòng tắm  
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 ghế tình yêu
+              </span>
+            </div>
+            <div class="facilities mb-4">
+            <h6 class="mb-1">Tiện nghi</h6>
+            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Wife 
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Tivi
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Điều hòa
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Cách âm
+              </span>
+              </div>
+              <div class="rating mb-4">
+              <h6 class="mb-1">Đánh giá</h6>
+              <span class="badge rounded-pill bg-light">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+            </span>
+              </div>
+              <div class="d-flex justify-content-evenly mb-2">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                <a href="#" class="btn btn-sm btn btn-outline-primary shadow-none ">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 my-3">
+      <div class="card border-0 shadow" style="max-width: 350px; margin: auto;  ">
+        <img src="/images/Phong/1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 >Phòng bình dân</h5>
+            <h6 class="mb-3">300.000 VND/đêm</h6>
+            <div class="features mb-4">
+              <h6 class="mb-1">Điểm đặc trưng
+              </h6>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 phòng ngủ  
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                1 ban công
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 phòng tắm  
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                2 ghế tình yêu
+              </span>
+            </div>
+            <div class="facilities mb-4">
+            <h6 class="mb-1">Tiện nghi</h6>
+            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Wife 
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Tivi
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Điều hòa
+              </span>
+              <span class="badge rounded-pill bg-light text-dark text-wrap">
+                Cách âm
+              </span>
+              </div>
+              <div class="rating mb-4">
+              <h6 class="mb-1">Đánh giá</h6>
+              <span class="badge rounded-pill bg-light">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+            </span>
+              </div>
+              <div class="d-flex justify-content-evenly mb-2">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                <a href="#" class="btn btn-sm btn btn-outline-primary shadow-none ">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 
       <div class="col-lg-12 text-center mt-5">
         <a href="#" class="btn btn-sm btn-outline-dark rounded-0 poppins-medium ">Thêm Phòng</a>
