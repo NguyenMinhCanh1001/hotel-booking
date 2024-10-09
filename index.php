@@ -25,19 +25,19 @@
           <div class="collapse navbar-collapse shadow-none" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active me-2 text-white " aria-current="page" href="#">Trang Chủ</a>
+                <a class="nav-link active me-2 text-white poppins-semibold" aria-current="page" href="#">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white" href="#">Phòng</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="#">Phòng</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white" href="#">Cơ sở Vật chất</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="#">Cơ sở Vật chất</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white" href="#">Liên hệ</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="#">Liên hệ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white" href="#">Giới thiệu</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="#">Giới thiệu</a>
               </li>
             </ul>
             
@@ -482,7 +482,8 @@
     </div>
   </div>
 
-  <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Đáng giá về khách sạn</h2>
+  <!-- đánh giá -->
+  <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Đánh giá về khách sạn</h2>
   <div class="container mt-5">
   <div class="swiper swiper-testimonial ">
     <div class="swiper-wrapper mb-5">
@@ -533,15 +534,96 @@
         </div>
       </div>
 
+     
     </div>
     <div class="swiper-pagination"></div>
   </div>
 
+  <div class="col-lg-12 text-center mt-5">
+        <a href="#" class="btn btn-sm btn-outline-dark rounded-0 poppins-medium ">Thêm đánh giá</a>
+      </div>
+
   </div>
 
-<br><br><br>
-<br><br><br>
+   <!-- Địa chỉ và liên hệ -->
+   <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Địa chỉ </h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+          <iframe class="w-100 rounded"  height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.294683886142!2d106.61638579999999!3d10.865176600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a10b0f0554f%3A0x769800e8967d6703!2zNzAgxJAuIFTDtCBLw70sIFTDom4gQ2jDoW5oIEhp4buHcCwgUXXhuq1uIDEyLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1728482146568!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="bg-white p-4 rounded mb-4">
+            <h5>Số liên hệ</h5>
+            <a href="tel: +4596423472" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone"></i>
+            +45 9642 3472 
+          </a>
+            <br>
+            <a href="tel: +2453629787" class="d-inline-block text-decoration-none text-dark"><i class="bi bi-telephone"></i>
+            +24 5362 9787
+          </a>
+          </div>
+          <div class="bg-white p-4 rounded mb-4">
+            <h5>Theo dõi chúng tôi trên</h5>
+            <a href="#" class="d-inline-block mb-2 ">
+              <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-facebook me-l"></i> Facebook
+              </span>
+          </a>
+          <br>
+            <a href="#" class="d-inline-block mb-2 ">
+              <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-tiktok"></i> TikTok
+              </span>
+          </a>
+          <br>
+            <a href="#" class="d-inline-block mb-2 ">
+              <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-instagram"></i> Instagram
+              </span>
+          </a>
+          
+          </div>
+        </div>
+      </div>
+    </div>
 
+<div class="container-fluid bg-white mt-5">
+  <div class="row">
+    <div class="col-lg-4 p-4">
+      <h3 class="merienda-header fs-3 mb-2"> UTH HOTEL</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, excepturi laboriosam? Nulla ex, corporis quis dolores esse, totam nisi cum iusto odio aspernatur ipsa eos ducimus corrupti quod, quos suscipit.
+      </p>
+    </div>
+    <div class="col-lg-4 p-4">
+      <h5 class="mb-3">Links</h5>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Trang chủ</a><br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Phòng</a><br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Cơ sở vật chất</a><br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">liên hệ</a><br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Giới thiệu</a><br>
+      </div>
+      <div class="col-lg-4 p-4">
+        <h5 class="mb-3">Theo dõi chúng tôi trên</h5>
+        <a href="#" class="d-inline-block text-dark text-decoration-none mb-3 ">
+              <i class="bi bi-facebook me-l"></i> Facebook
+          </a>
+          <br>
+            <a href="#" class="d-inline-block text-dark text-decoration-none mb-3 ">
+              <i class="bi bi-tiktok"></i> TikTok
+          </a>
+          <br>
+            <a href="#" class="d-inline-block text-dark text-decoration-none mb-2 ">
+              <i class="bi bi-instagram"></i> Instagram
+          </a>
+      </div>
+  </div>
+</div>
+
+
+
+<h6 class="text-center bg-dark text-white p-3 m-0">NHÓM 3</h6>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
