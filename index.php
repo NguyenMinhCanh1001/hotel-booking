@@ -453,6 +453,92 @@
     </div>
   </div>
 
+  <!-- Tiện nghi -->
+  <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Tiện nghi khách sạn</h2>
+  <div class="container">
+    <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+      <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/images/TienNghi/wifi.png" width="80px">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/images/TienNghi/wifi.png" width="80px">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/images/TienNghi/wifi.png" width="80px">
+        <h5 class="mt-3">Wifi</h5>
+      </div> <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/images/TienNghi/wifi.png" width="80px">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/images/TienNghi/wifi.png" width="80px">
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+        <a href="#" class="btn btn-sm btn-outline-dark rounded-0 poppins-medium ">Thêm tiện nghi</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Đáng giá về khách sạn</h2>
+  <div class="container mt-5">
+  <div class="swiper swiper-testimonial ">
+    <div class="swiper-wrapper mb-5">
+      <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-4 ">
+          <img src="/images/TienNghi/star.png" width="30px" height="">
+          <h6 class="m-0 ms-2">Phong 1</h6>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nemo recusandae saepe accusamus rem eligendi itaque vitae quas laborum ducimus?
+        </p>
+        <div class="rating">
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-half text-warning"></i>
+        </div>
+      </div>
+
+      <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-4 ">
+          <img src="/images/TienNghi/star.png" width="30px" height="">
+          <h6 class="m-0 ms-2">Phong 1</h6>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nemo recusandae saepe accusamus rem eligendi itaque vitae quas laborum ducimus?
+        </p>
+        <div class="rating">
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-half text-warning"></i>
+        </div>
+      </div>
+      <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-4 ">
+          <img src="/images/TienNghi/star.png" width="30px" height="">
+          <h6 class="m-0 ms-2">Phong 1</h6>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nemo recusandae saepe accusamus rem eligendi itaque vitae quas laborum ducimus?
+        </p>
+        <div class="rating">
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-half text-warning"></i>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  </div>
+
 <br><br><br>
 <br><br><br>
 
@@ -470,6 +556,24 @@
         delay: 2500,
         disableOnInteraction:false,
       }
+    });
+
+    var swiper = new Swiper(".swiper-testimonial", {
+      grabCursor: true,
+      effect: "creative",
+      loop: true,
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
     });
   </script>
 </body>

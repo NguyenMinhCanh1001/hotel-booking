@@ -64,5 +64,8 @@
     padding: 0 35px;
   }
 }
-
+.profile img {
+  width: 30px; /* Giữ kích thước hình ảnh */
+  height: auto; /* Tự động giữ tỷ lệ chiều cao */
+}
 
