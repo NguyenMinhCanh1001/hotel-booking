@@ -1,3 +1,7 @@
+  :root{
+    --teal :#66BB6A;
+    --teal_hover: #388E3C;
+}
 
 .poppins-regular {
     font-family: "Poppins", system-ui;
@@ -46,12 +50,12 @@
   }
 }
 .custom-bg{
-  background-color: #66BB6A;
-  border: 1px solid #66BB6A;
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
 }
 .custom-bg:hover{
-  background-color: #388E3C;
-  border: 1px solid #388E3C;
+  background-color: var(--teal_hover) ;
+  border: 1px solid var(--teal_hover);
 }
 .availability-form{
   margin-top: -50px; 
@@ -67,5 +71,11 @@
 .profile img {
   width: 30px; /* Giữ kích thước hình ảnh */
   height: auto; /* Tự động giữ tỷ lệ chiều cao */
+}
+
+.h-line{
+  width: 350px;
+  margin: 0 auto;
+  height: 1.7px;
 }
 
