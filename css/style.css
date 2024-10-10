@@ -73,8 +73,13 @@
   height: auto; /* Tự động giữ tỷ lệ chiều cao */
 }
 
+.img-about{
+  width: 400px;
+  height: 300px;
+}
+
 .h-line{
-  width: 350px;
+  width: 300px;
   margin: 0 auto;
   height: 1.7px;
 }

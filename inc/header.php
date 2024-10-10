@@ -20,7 +20,7 @@
                 <a class="nav-link me-2 text-white poppins-semibold" href="#">Liên hệ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white poppins-semibold" href="#">Giới thiệu</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="about.php">Giới thiệu</a>
               </li>
             </ul>
             
