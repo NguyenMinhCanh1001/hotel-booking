@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTH HOTEL - Cở sở vật chất</title>
   <?php require('inc/links.php')?>
-  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  
   <style>
     .pop:hover{
       border-top-color: palevioletred !important ;

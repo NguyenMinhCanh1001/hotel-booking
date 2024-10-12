@@ -11,13 +11,13 @@
                 <a class="nav-link active me-2 text-white poppins-semibold" aria-current="page" href="index.php">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white poppins-semibold" href="#">Phòng</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="rooms.php">Phòng</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link me-2 text-white poppins-semibold" href="facilities.php">Cơ sở Vật chất</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-2 text-white poppins-semibold" href="#">Liên hệ</a>
+                <a class="nav-link me-2 text-white poppins-semibold" href="contact.php">Liên hệ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link me-2 text-white poppins-semibold" href="about.php">Giới thiệu</a>
