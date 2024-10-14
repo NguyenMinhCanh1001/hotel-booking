@@ -1,0 +1,86 @@
+  :root{
+    --teal :#66BB6A;
+    --teal_hover: #388E3C;
+}
+
+.poppins-regular {
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", system-ui;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", system-ui;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .merienda-header {
+    font-family: "Merienda", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .pacifico-regular {
+    font-family: "Pacifico", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 460px; 
+}
+@media (max-width: 768px) {
+  .swiper-slide img {
+      height: 200px; 
+  }
+}
+.custom-bg{
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
+}
+.custom-bg:hover{
+  background-color: var(--teal_hover) ;
+  border: 1px solid var(--teal_hover);
+}
+.availability-form{
+  margin-top: -50px; 
+  z-index: 2;
+  position: relative ;
+}
+@media screen and (max-width: 575px){
+  .availability-form{
+    margin-top: 0px; 
+    padding: 0 35px;
+  }
+}
+.profile img {
+  width: 30px; /* Giữ kích thước hình ảnh */
+  height: auto; /* Tự động giữ tỷ lệ chiều cao */
+}
+
+.img-about{
+  width: 400px;
+  height: 300px;
+}
+
+.h-line{
+  width: 300px;
+  margin: 0 auto;
+  height: 1.7px;
+}
+
