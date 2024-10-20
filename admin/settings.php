@@ -29,9 +29,9 @@
                 </button>         
               </div>
               
-              <h6 class="card-subtitle mb-1 fw-bold">Side Title</h6>
+              <h6 class="card-subtitle mb-1 fw-bold">Tiêu đề</h6>
               <p class="card-text" id="site_title"></p>
-              <h6 class="card-subtitle mb-1 fw-bold">About us</h6>
+              <h6 class="card-subtitle mb-1 fw-bold">Giới thiệu về khách sạn</h6>
               <p class="card-text" id="site_about"></p>
             </div>
           </div>
@@ -45,11 +45,11 @@
                 </div>
                 <div class="modal-body">
                   <div class="mb-3">
-                    <label class="form-label">Tiêu đề web</label>
+                    <label class="form-label">Tiêu đề </label>
                     <input type="text" name="site_title" id="site_title_inp" class="form-control shadow-none">
                   </div>
                   <div class="mb-3">
-                    <label class="form-label">About us</label>
+                    <label class="form-label">Giới thiệu về khách sạn</label>
                     <textarea name="site_about"  id="site_about_inp" class="form-control shadow-none" rows="6"></textarea>
                   </div>
                 </div>
