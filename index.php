@@ -15,7 +15,7 @@
   <div class="swiper swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="/images/AnhBia/1.webp" class="" />
+        <img src="/images/AnhBia/1.webp" />
       </div>
       <div class="swiper-slide">
         <img src="/images/AnhBia/2.jpg" />
