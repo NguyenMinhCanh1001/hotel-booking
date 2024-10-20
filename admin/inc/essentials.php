@@ -1,13 +1,5 @@
 
-<style>
-    .custom-alert {
-        position: fixed;
-        top: 25px; 
-        left: 900px; 
-        max-width: 600px;
-        z-index: 1050;
-    }
-</style>
+
 <?php
 
     function adminLogin()
@@ -42,5 +34,5 @@
             alert;
     }
 
-
+    
 ?>

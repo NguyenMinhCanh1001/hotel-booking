@@ -39,6 +39,7 @@
   
   input[type=number] {
     -moz-appearance: textfield;
+    appearance:textfield;
   }
   .swiper-slide img {
     width: 100%;
@@ -83,4 +84,19 @@
   margin: 0 auto;
   height: 1.7px;
 }
+#dashboard-menu{
+  position: fixed;
+  height: 100%;
+}
+@media screen and (max-width: 991px) {
+  #dashboard-menu{
+    height: auto;
+    width: 100%;
+  }
+  #main-content{
+    margin-top: 60px;
+  }
+}
 
+
+    
