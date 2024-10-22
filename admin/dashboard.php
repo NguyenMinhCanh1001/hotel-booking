@@ -24,5 +24,5 @@
       </div>
 
       <?php require('inc/scripts.php'); ?>
-  </bod>
+  </body>
 </html>
