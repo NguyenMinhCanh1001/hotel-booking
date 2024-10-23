@@ -273,7 +273,7 @@
             var modal = bootstrap.Modal.getInstance(myModal);            
             modal.hide();
             if(this.responseText == 1){
-              alert('success','Lưu thành công!');
+             alert('success','Lưu thành công!');
                get_general();
              }
              else
@@ -320,12 +320,29 @@
             for(i = 0; i < contacts_p_id.length; i++){
               document.getElementById(contacts_p_id[i]).innerText = contacts_data[i+1];
             }
-            iframe.src = contacts_data[9];
+            if (isValidURL(contacts_data[9])) {
+              iframe.src = contacts_data[9];
+            } 
+            else {
+              iframe.src = '';
+            }
+
             contacts_inp(contacts_data);
+            
+            function isValidURL(url) {
+              try {
+                new URL(url);
+                return true;
+              } catch (err) {
+                return false;
+              }
+            }
             
           }
           xhr.send('get_contacts');
         }
+
+      
 
         function contacts_inp(data)
         {
