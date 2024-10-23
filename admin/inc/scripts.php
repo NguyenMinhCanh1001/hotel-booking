@@ -2,6 +2,13 @@
 
 <script>
     function alert(type, msg){
+        let existingAlert = document.querySelector('.custom-alert');
+        if (existingAlert) {
+            let alertInstance = bootstrap.Alert.getOrCreateInstance(existingAlert);
+            alertInstance.close();  
+        }
+
+        // Tạo alert mới
         let bs_class = (type == 'success') ? 'alert-success' : 'alert-danger';
         let element = document.createElement('div');
         element.innerHTML = `<div class="alert ${bs_class} alert-dismissible fade show custom-alert" role="alert">
@@ -10,5 +17,11 @@
                 </div>`;
 
         document.body.append(element);
+
+        // Tự động ẩn sau 3 giây (3000ms)
+        setTimeout(() => {
+            let alertToRemove = bootstrap.Alert.getOrCreateInstance(element.firstChild);
+            alertToRemove.close();
+        }, 3000);
     }
 </script>

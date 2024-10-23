@@ -85,15 +85,6 @@
   margin: 0 auto;
   height: 1.7px;
 }
-#dashboard-menu{
-  position: fixed;
-  height: 100%;
-}
-.custom-alert {
-  position: fixed;
-  top: 80px; 
-  left: 1250px; 
-  max-width: 600px;
-  z-index: 1050;
-}
+
+
 
