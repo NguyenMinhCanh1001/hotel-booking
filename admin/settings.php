@@ -8,7 +8,7 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>settings</title>
+      <title>Settings</title>
       <?php require('inc/links.php'); ?>
   </head>
   <body class="bg-white">
@@ -68,7 +68,7 @@
 
           <!-- shutdown section-->
            <!--Đóng trang web-->
-          <div class="card border-0 shadow-sm" >
+          <div class="card border-0 shadow-sm mb-4" >
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h5 class="card-title m-0">Đóng trang web</h5>
@@ -84,8 +84,8 @@
             </div>
           </div>
 
-          <!-- contact details modal-->
-          <!-- Chi tiết phần liên lạc -->
+          <!-- contact settings  section-->
+          <!-- phần thông tin liên hệ -->
           <div class="card border-0 shadow mb-4" >
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-between mb-3">
@@ -121,10 +121,10 @@
                 <div class="col-lg-6">
                   <div class="mb-4">
                       <h6 class="card-subtitle mb-1 fw-bold">Link mạng xã hội</h6>
-                      <p class="card-text mb-1"><i class="bi bi-facebook me-l"></i>
+                      <p class="card-text mb-1"><i class="bi bi-facebook me-1"></i>
                       <span id="fb"></span>
                     </p>
-                    <p class="card-text"><i class="bi bi-tiktok"></i>
+                    <p class="card-text mb-1"><i class="bi bi-tiktok"></i>
                       <span id="tt"></span>
                     </p>
                     <p class="card-text"><i class="bi bi-instagram"></i>
@@ -132,13 +132,85 @@
                     </p>
                   </div>
                   <div class="mb-4">
-                      <h6 class="card-subtitle mb-1 fw-bold">iFrame</h6>
+                      <h6 class="card-subtitle mb-1 fw-bold">Bản đồ</h6>
                       <iframe id="iframe" class="border p-2 w-100" loading="lazy"></iframe>
                   </div>
                 </div>
               </div>
              
               
+            </div>
+          </div>
+
+
+          <!-- contact details modal-->
+           <!-- chi tiết liên hệ -->
+           <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <form id="contacts_s_form">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" >Cài đặt liên hệ</h5>               
+                </div>
+                <div class="modal-body">
+
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label fw-bold ">Đia chỉ</label>
+                          <input type="text" name="address" id="address_inp" class="form-control shadow-none" required >
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold ">Link Google map</label>
+                          <input type="text" name="gmap" id="gmap_inp" class="form-control shadow-none" required >
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold ">Số điện thoại </label>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" ><i class="bi bi-telephone"></i></span>
+                            <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" ><i class="bi bi-telephone"></i></span>
+                            <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold ">Email</label>
+                          <input type="email" name="email" id="email_inp" class="form-control shadow-none" required >
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-md-6">
+                      <div class="mb-3">
+                          <label class="form-label fw-bold ">Link mạng xã hội</label>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" ><i class="bi bi-facebook "></i></span>
+                            <input type="text" name="fb" id="fb_inp" class="form-control shadow-none" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" ><i class="bi bi-tiktok"></i></span>
+                            <input type="text" name="tt" id="tt_inp" class="form-control shadow-none" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" ><i class="bi bi-instagram"></i></span>
+                            <input type="text" name="insta" id="insta_inp" class="form-control shadow-none" required>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold ">Bản đồ</label>
+                          <input type="text" name="iframe" id="iframe_inp" class="form-control shadow-none" required >
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" onclick=" contacts_inp(contacts_data);" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Đóng</button>
+                  <button type="submit" class="btn custom-bg text-white shadow-none">Đồng ý</button>
+                </div>
+              </div>
+              </form>             
             </div>
           </div>
 
@@ -154,6 +226,8 @@
         let general_s_form = document.getElementById('general_s_form');
         let site_title_inp = document.getElementById('site_title_inp');
         let site_about_inp = document.getElementById('site_about_inp');
+
+        let contacts_s_form = document.getElementById('contacts_s_form');
 
         function get_general()
         {
@@ -199,7 +273,7 @@
             var modal = bootstrap.Modal.getInstance(myModal);            
             modal.hide();
             if(this.responseText == 1){
-             alert('success','Lưu thành công!');
+              alert('success','Lưu thành công!');
                get_general();
              }
              else
@@ -209,6 +283,7 @@
           }
           xhr.send('site_title='+site_title_val+'&site_about='+site_about_val+'&upd_general');
         }
+
         function upd_shutdown(val){
           let xhr=new XMLHttpRequest();
           xhr.open("POST","ajax/settings_crud.php",true);
@@ -221,7 +296,7 @@
              }
              else
              {
-               alert('success','trang web đã mở!');
+              alert('success','trang web đã mở!');
             }  
              get_general(); 
             }
@@ -240,9 +315,66 @@
 
           xhr.onload = function(){
             contacts_data = JSON.parse(this.responseText); 
-            console.log(contacts_data);
+            contacts_data = Object.values(contacts_data);
+
+            for(i = 0; i < contacts_p_id.length; i++){
+              document.getElementById(contacts_p_id[i]).innerText = contacts_data[i+1];
+            }
+            iframe.src = contacts_data[9];
+            contacts_inp(contacts_data);
+            
           }
           xhr.send('get_contacts');
+        }
+
+        function contacts_inp(data)
+        {
+          let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'fb_inp', 'tt_inp', 'insta_inp', 'iframe_inp'];
+
+          for(i = 0; contacts_inp_id.length; i++){
+            document.getElementById(contacts_inp_id[i]).value = data[i+1];
+          }
+        }
+
+        contacts_s_form.addEventListener('submit',function(e){
+          e.preventDefault();
+          upd_contacts();
+        });
+
+        function upd_contacts()
+        {
+          let index = ['address', 'gmap', 'pn1', 'pn2', 'email', 'fb', 'tt', 'insta','iframe'];
+          let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'fb_inp', 'tt_inp', 'insta_inp', 'iframe_inp'];
+
+          let data_str = "";
+
+          for(i = 0; i < index.length; i++ ){
+            data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value + '&';
+          }
+          data_str += "upd_contacts";
+
+          let xhr=new XMLHttpRequest();
+          xhr.open("POST","ajax/settings_crud.php",true);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+          xhr.onload = function(){
+            var myModal = document.getElementById('contacts-s');
+            var modal = bootstrap.Modal.getInstance(myModal);            
+            modal.hide();
+
+            if(this.responseText == 1 )
+             {
+              alert('success','Thay đổi đã được lưu!');
+              get_contacts()
+             }
+             else
+             {
+               alert('error','Không có thay đổi!');
+            }  
+          }
+
+          xhr.send(data_str);
+
         }
 
         window.onload = function(){
