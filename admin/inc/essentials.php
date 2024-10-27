@@ -1,8 +1,8 @@
 <?php
     
     // fontend purpose data
-    define('SITE_URL','http://127.0.0.1/hotel-booking/');
-    define('ABOUT_IMG_PATH',SITE_URL.'images/GioiThieu/');
+    define('SITE_URL','http://localhost:3000/');
+    define('ABOUT_IMG_PATH',SITE_URL.'/images/GioiThieu/');
 
     // backend upload process need this data
     define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hotel-booking/images/');
@@ -42,30 +42,37 @@
             alert;
     }
 
-    function uploadImage($image,$folder)
-    {
-        $valid_mime = ['image/jpeg' ,'image/png', 'image/webp'];
+    function uploadImage($image, $folder) {
+        // Các loại MIME hợp lệ
+        $valid_mime = ['image/jpeg', 'image/png', 'image/webp'];
         $img_mime = $image['type'];
-
-        if(!in_array($img_mime,$valid_mime)){
-            return 'inv_img';
+    
+        // Kiểm tra loại MIME
+        if (!in_array($img_mime, $valid_mime)) {
+            return 'inv_img'; // Trả về 'inv_img' nếu loại không hợp lệ
         }
-       else if(($image['size']/(1024*1024))>2){
-        return 'inv_size';
-       }
-        else{
-        $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
-        $rname= 'IMG_'.random_int(11111,99999)."$ext";
-        
-        $img_path = UPLOAD_IMAGE_PATH.$folder.$rname;
-        if(move_uploaded_file($image['tmp_name'],$img_path)){
-            return $rname;
+    
+        // Kiểm tra kích thước file (tối đa 2MB)
+        if (($image['size'] / (1024 * 1024)) > 2) {
+            return 'inv_size'; // Trả về 'inv_size' nếu file quá lớn
         }
-        else{
-            return 'upload_failed';
-        }
+    
+        // Lấy phần mở rộng của file
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        // Tạo tên file ngẫu nhiên
+        $rname = 'IMG_' . random_int(11111, 99999) . ".$ext";
+    
+        // Đường dẫn đến file hình ảnh
+        $img_path = UPLOAD_IMAGE_PATH . $folder . '/' . $rname; // Đảm bảo có dấu '/' giữa $folder và $rname
+    
+        // Di chuyển file vào thư mục đích
+        if (move_uploaded_file($image['tmp_name'], $img_path)) {
+            return $rname; // Trả về tên file nếu upload thành công
+        } else {
+            return 'upload_failed'; // Trả về 'upload_failed' nếu upload thất bại
         }
     }
+    
 
     function deleteImage($image, $folder){
         if(unlink(UPLOAD_IMAGE_PATH.$folder.$image)){
