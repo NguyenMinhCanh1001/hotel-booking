@@ -5,9 +5,9 @@
     define('ABOUT_IMG_PATH',SITE_URL.'images/GioiThieu/');
 
     // backend upload process need this data
-    define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hotel-booking/images/');
-    define('ABOUT_FOLDER','GioiThieu/');
-
+    define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/images/');
+    define('ABOUT_FOLDER', 'GioiThieu/');
+    
     function adminLogin()
     {
         session_start();
@@ -42,31 +42,36 @@
             alert;
     }
 
-    function uploadImage($image,$folder)
-    {
-        $valid_mime = ['image/jpeg' ,'image/png', 'image/webp'];
+    function uploadImage($image, $folder) {
+        $valid_mime = ['image/jpeg', 'image/png', 'image/webp'];
         $img_mime = $image['type'];
-
-        if(!in_array($img_mime,$valid_mime)){
+    
+        if (!in_array($img_mime, $valid_mime)) {
             return 'inv_img';
-        }
-       else if(($image['size']/(1024*1024))>2){
-        return 'inv_size';
-       }
-        else{
-            $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
-            $rname= 'IMG_'.random_int(11111,99999).".$ext";
-        
-            $img_path = UPLOAD_IMAGE_PATH . $folder . $rname;
-
-            if(move_uploaded_file($image['tmp_name'],$img_path)){
-                return $rname;
+        } else if (($image['size'] / (1024 * 1024)) > 2) {
+            return 'inv_size';
+        } else {
+            $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+            $rname = 'IMG_' . random_int(11111, 99999) . ".$ext";
+            
+            
+            $img_path = UPLOAD_IMAGE_PATH . $folder;
+    
+            
+            if (!is_dir($img_path)) {
+                mkdir($img_path, 0777, true); 
             }
-            else{
+    
+            $img_path .= $rname; 
+    
+            if (move_uploaded_file($image['tmp_name'], $img_path)) {
+                return $rname;
+            } else {
                 return 'upload_failed';
-        }
+            }
         }
     }
+    
 
     function deleteImage($image, $folder){
         if(unlink(UPLOAD_IMAGE_PATH.$folder.$image)){
