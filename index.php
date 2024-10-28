@@ -440,13 +440,6 @@
     <!-- Địa chỉ và liên hệ -->
 
 
-
-    <?php
-    $contact_q="SELECT * FROM `contact_details` WHERE 'sr_no' =?";
-    $values=[1];
-    $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
-    print_r($contact_r);
-    ?>
     <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Địa chỉ </h2>
     <div class="container">
         <div class="row">
@@ -457,39 +450,46 @@
             <div class="col-lg-4 col-md-4">
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Số liên hệ</h5>
-                    <a href="tel: +<?php echo $contact_r['pn1'] ?>"
+                    <a href="tel: <?php echo $contact_r['pn1'] ?>"
                         class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone"></i>
-                        +<?php echo $contact_r['pn1'] ?>
+                        <?php echo $contact_r['pn1'] ?>
                     </a>
                     <br>
                     <?php 
-                    if($contact_r['pn2']!=''){
-                        echo<<<data
-                          <a href="tel: +2453629787" class="d-inline-block text-decoration-none text-dark"><i
-                              class="bi bi-telephone"></i>
-                          +24 5362 9787
-                          </a>
-                        data;
-                    }
+                        if ($contact_r['pn2'] != '') {
+                            echo <<<data
+                                <a href="tel:{$contact_r['pn2']}" class="d-inline-block text-decoration-none text-dark">
+                                    <i class="bi bi-telephone"></i> {$contact_r['pn2']}
+                                </a>
+                            data;
+                        }
                     ?>
+
 
 
                 </div>
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Theo dõi chúng tôi trên</h5>
-                    <a href="#" class="d-inline-block mb-2 ">
+                    <?php
+                        if ($contact_r['tt'] != "") {
+                            echo <<< data
+                            <a href="{$contact_r['tt']}" target="_blank"  class="d-inline-block mb-2">
+                                <span class="badge bg-light text-dark fs-6 p-2">
+                                    <i class="bi bi-tiktok"></i>TikTok
+                                </span>
+                            </a>
+                            <br>
+                            data;
+                        }
+                        ?>
+
+                    <a href="<?php echo $contact_r['fb']; ?>" class="d-inline-block mb-2 "  target="_blank">
                         <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-facebook me-l"></i> Facebook
+                            <i class="bi bi-facebook me-1"></i>Facebook
                         </span>
                     </a>
                     <br>
-                    <a href="#" class="d-inline-block mb-2 ">
-                        <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-tiktok"></i> TikTok
-                        </span>
-                    </a>
-                    <br>
-                    <a href="#" class="d-inline-block mb-2 ">
+                    <a href="<?php echo $contact_r['insta']; ?>" class="d-inline-block mb-2 " target="_blank">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-instagram"></i> Instagram
                         </span>

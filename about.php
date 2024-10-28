@@ -75,30 +75,19 @@
   <div class="container px-4 ">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper mb-5 ">
-      <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-        <img src="/images/GioiThieu/dat.jpg" >
-        <h5 class="mt-2">Đạt09</h5>
-      </div>
-      <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-        <img src="/images/GioiThieu/sony.jpg" >
-        <h5 class="mt-2">Sony</h5>
-      </div>
-      <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-        <img src="/images/GioiThieu/tuan.jpg" >
-        <h5 class="mt-2">Tuandeptrai</h5>
-      </div>
-      <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-        <img src="/images/GioiThieu/dat.jpg" >
-        <h5 class="mt-2">Đạt09</h5>
-      </div>
-      <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-        <img src="/images/GioiThieu/sony.jpg" >
-        <h5 class="mt-2">Sony</h5>
-      </div>
-      <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-        <img src="/images/GioiThieu/tuan.jpg" >
-        <h5 class="mt-2">Tuandeptrai</h5>
-      </div>
+      <?php 
+        $about_q = selectAll('team_details');
+        $path = ABOUT_IMG_PATH;
+        while($row = mysqli_fetch_assoc( $about_q)){
+          echo <<< data
+            <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+              <img src="$path$row[picture]" >
+              <h5 class="mt-2">$row[name]</h5>
+            </div>
+          data;
+        }
+      ?>
+
     </div>
     <div class="swiper-pagination"></div>
   </div>

@@ -183,13 +183,13 @@
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text"><i
                                                                 class="bi bi-telephone"></i></span>
-                                                        <input type="text" name="pn1" id="pn1_inp"
+                                                        <input type="number" name="pn1" id="pn1_inp"
                                                             class="form-control shadow-none" required>
                                                     </div>
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text"><i
                                                                 class="bi bi-telephone"></i></span>
-                                                        <input type="text" name="pn2" id="pn2_inp"
+                                                        <input type="number" name="pn2" id="pn2_inp"
                                                             class="form-control shadow-none">
                                                     </div>
                                                     <div class="mb-3">
@@ -212,7 +212,7 @@
                                                         <span class="input-group-text"><i
                                                                 class="bi bi-tiktok"></i></span>
                                                         <input type="text" name="tt" id="tt_inp"
-                                                            class="form-control shadow-none" required>
+                                                            class="form-control shadow-none" >
                                                     </div>
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text"><i
@@ -245,7 +245,7 @@
                 <div class="card border-0 shadow mb-4">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title m-0">Management Team</h5>
+                            <h5 class="card-title m-0">Đội ngũ quản lý</h5>
                             <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#team-s">
                                 <i class="bi bi-plus-square"></i> Add
@@ -492,13 +492,13 @@
             modal.hide();
 
             if (this.responseText == 'inv_img') {
-                alert('error', 'Only JPG and PNG images are allows!');
+                alert('error', 'Chỉ cho phép hình ảnh JPG và PNG!');
             } else if (this.responseText == 'inv_size') {
-                alert('error', 'Image should be less than 2MB!');
+                alert('error', 'Hình ảnh phải nhỏ hơn 2MB!');
             } else if (this.responseText == 'upd_failed') {
-                alert('error', 'Image upload failed. Server Down!');
+                alert('error', 'Tải hình ảnh lên không thành công. Máy chủ ngừng hoạt động!');
             } else {
-                alert('success', 'New  member added!');
+                alert('success', 'Ảnh thành viên đã được thêm vào!');
                 member_name_inp.value = '';
                 member_picture_inp.value = '';
                 get_members();
@@ -526,10 +526,10 @@
 
         xhr.onload = function() {
             if (this.responseText == 1) {
-                alert('success', 'member removed!');
+                alert('success', 'Ảnh thành viên đã bị xóa!');
                 get_members();
             } else {
-                alert('error', 'Server down!');
+                alert('error', 'Máy chủ ngừng hoạt động!');
             }
         }
         xhr.send('rem_member=' + val);
