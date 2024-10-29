@@ -3,11 +3,11 @@
     // fontend purpose data
     define('SITE_URL','http://localhost:3000/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/GioiThieu/');
-
+    define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
     // backend upload process need this data
     define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/images/');
     define('ABOUT_FOLDER', 'GioiThieu/');
-    
+    define('CAROUSEL_FOLDER', 'carousel/');
     function adminLogin()
     {
         session_start();
