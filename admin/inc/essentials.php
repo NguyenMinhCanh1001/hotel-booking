@@ -4,10 +4,14 @@
     define('SITE_URL','http://localhost:3000/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/GioiThieu/');
     define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
+    define('FEATURES_IMG_PATH',SITE_URL.'images/TienNghi/');
     // backend upload process need this data
     define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/images/');
     define('ABOUT_FOLDER', 'GioiThieu/');
     define('CAROUSEL_FOLDER', 'carousel/');
+    define('FEATURES_FOLDER', 'TienNghi/');
+
+    
     function adminLogin()
     {
         session_start();
@@ -79,6 +83,36 @@
         }
         else{ 
             return false;
+        }
+    }
+
+    function uploadSVGImage($image, $folder) {
+        $valid_mime = ['image/svg+xml'];
+        $img_mime = $image['type'];
+    
+        if (!in_array($img_mime, $valid_mime)) {
+            return 'inv_img';
+        } else if (($image['size'] / (1024 * 1024)) > 1) {
+            return 'inv_size';
+        } else {
+            $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+            $rname = 'IMG_' . random_int(11111, 99999) . ".$ext";
+            
+            
+            $img_path = UPLOAD_IMAGE_PATH . $folder;
+    
+            
+            if (!is_dir($img_path)) {
+                mkdir($img_path, 0777, true); 
+            }
+    
+            $img_path .= $rname; 
+    
+            if (move_uploaded_file($image['tmp_name'], $img_path)) {
+                return $rname;
+            } else {
+                return 'upload_failed';
+            }
         }
     }
 ?>

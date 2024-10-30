@@ -20,8 +20,12 @@
                         <a class="nav-link text-white" href="dashboard.php">Bảng điều khiển</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="features_facilities.php">Tính năng và tiện nghi</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="user_queries.php">Truy vấn người dùng</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link text-white" href="carousel.php">Người dùng</a>
                     </li>
