@@ -35,7 +35,6 @@ if (isset($_POST['get_features'])) {
     }
 }
 
-
 if (isset($_POST['rem_feature'])) {
     $frm_data = filteration($_POST);
     $values = [$frm_data['rem_feature']];
@@ -84,7 +83,6 @@ if (isset($_POST['get_facilities'])) {
     $i++;
     }
 }
-
 
 if (isset($_POST['rem_facility'])) {
     $frm_data = filteration($_POST);
