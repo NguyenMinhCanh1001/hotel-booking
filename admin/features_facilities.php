@@ -270,7 +270,7 @@
                 alert('error', 'Server Down!');
             }
         }
-        xhr.send('rem_feature' + val);
+        xhr.send('rem_feature=' + val);
     }
 
     facility_s_form.addEventListener('submit', function(e) {
@@ -338,7 +338,7 @@
                 alert('error', 'Server Down!');
             }
         }
-        xhr.send('rem_facility' + val);
+        xhr.send('rem_facility=' + val);
     }
 
 
