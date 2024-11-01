@@ -20,6 +20,9 @@
                         <a class="nav-link text-white" href="dashboard.php">Bảng điều khiển</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="rooms.php">Phòng</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="features_facilities.php">Tính năng và tiện nghi</a>
                     </li>
                     <li class="nav-item">

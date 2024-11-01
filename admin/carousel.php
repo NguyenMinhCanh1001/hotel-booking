@@ -62,7 +62,7 @@
                                 <div class="modal-footer">
                                     <button type="button" onclick="member_name.value='',carousel_picture.value=''"
                                         class="btn text-secondary shadow-none" data-bs-dismiss="modal">Đóng</button>
-                                    <button type="submit" class="btn text-secondary shadow-none">Đồng ý</button>
+                                    <button type="submit" class="btn custom-bg text-white shadow-none">Đồng ý</button>
                                 </div>
                             </div>
                         </form>

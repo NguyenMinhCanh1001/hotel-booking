@@ -28,21 +28,6 @@
                         data;
                         }
                 ?>
-                <div class="swiper-slide">
-                    <img src="/images/AnhBia/1.webp" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/images/AnhBia/2.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/images/AnhBia/3.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/images/AnhBia/4.webp" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/images/AnhBia/5.jpg" />
-                </div>
             </div>
         </div>
     </div>
