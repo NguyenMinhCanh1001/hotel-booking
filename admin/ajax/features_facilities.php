@@ -70,7 +70,7 @@ if (isset($_POST['get_facilities'])) {
     echo <<<data
         <tr class = 'align-middle'>
             <td>$i</td>
-            <td><img src="$row[icon]" width="100px"></td>
+            <td><img src="$path$row[icon]" width="100px"></td>
             <td>$row[name]</td>
             <td>$row[description]</td>
             <td>
@@ -88,19 +88,21 @@ if (isset($_POST['rem_facility'])) {
     $frm_data = filteration($_POST);
     $values = [$frm_data['rem_facility']];
     
-    $pre_q= "SELECT * FROM facilities WHERE id=?";
-    $res = select($pre_q,$values,'i');
+    $pre_q = "SELECT * FROM facilities WHERE id=?";
+    $res = select($pre_q, $values, 'i');
     $img = mysqli_fetch_assoc($res);
     
-
     if(deleteImage($img['icon'], FACILITIES_FOLDER)){
-        $q= "DELETE FROM facilities WHERE id =?";
-        $res= delete($q,$values,'i');
+        $q = "DELETE FROM facilities WHERE id =?";
+        $res = delete($q, $values, 'i');
         echo $res;
     }
     else{
         echo 0;
     }
+    
 }
+
+
 
 ?>
