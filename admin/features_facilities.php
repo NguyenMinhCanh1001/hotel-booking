@@ -282,8 +282,8 @@
         let data = new FormData();
         data.append('name', facility_s_form.elements['facility_name'].value);
         data.append('icon', facility_s_form.elements['facility_icon'].files[0]);
-        data.append('desc', facility_s_form.elements['facility_desc '].value);
-        data.append('add_feature', '');
+        data.append('desc', facility_s_form.elements['facility_desc'].value);
+        data.append('add_facility', '');
 
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "ajax/features_facilities.php", true);
