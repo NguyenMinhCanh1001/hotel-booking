@@ -4,12 +4,12 @@
     define('SITE_URL','http://localhost:3000/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/GioiThieu/');
     define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
-    define('FEATURES_IMG_PATH',SITE_URL.'images/TienNghi/');
+    define('FACILITIES_IMG_PATH',SITE_URL.'images/facilities/');
     // backend upload process need this data
     define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/images/');
     define('ABOUT_FOLDER', 'GioiThieu/');
     define('CAROUSEL_FOLDER', 'carousel/');
-    define('FEATURES_FOLDER', 'TienNghi/');
+    define('FACILITIES_FOLDER', 'facilities/');
 
     
     function adminLogin()

@@ -95,7 +95,7 @@
 
                         <div class="table-responsive-md" style="height:350px; overflow-y: scroll;">
                             <table class=" table table-hover border">
-                                <thead class="sticky-stop">
+                                <thead>
                                     <tr class="bg-dark text-light">
                                         <th scope=" col">#</th>
                                         <th scope="col">Name</th>
@@ -122,12 +122,12 @@
 
                         <div class="table-responsive-md" style="height:350px; overflow-y: scroll;">
                             <table class=" table table-hover border">
-                                <thead class="sticky-stop">
+                                <thead>
                                     <tr class="bg-dark text-light">
                                         <th scope=" col">#</th>
                                         <th scope="col">Icon</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Description</th>
+                                        <th scope="col" width="40%">Description</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -230,12 +230,12 @@
             modal.hide();
 
             if (this.responseText == 1) {
-                alert('success', 'tính năng đã được thêm vào!');
+                alert('success', 'Feature is add in room!');
                 feature_s_form.elements['feature_name'].value = '';
                 get_features();
 
             } else {
-                alert('error', 'Máy chủ ngừng hoạt động!');
+                alert('error', 'Server Down!');
             }
         }
         xhr.send(data);
@@ -261,13 +261,13 @@
 
         xhr.onload = function() {
             if (this.responseText == 1) {
-                alert('success', 'tính năng đã bị xóa!');
+                alert('success', 'Feature removed!');
                 get_features();
             } else if (this.responseText == 'room_added') {
 
                 alert('error', 'Feature is added in the room!');
             } else {
-                alert('error', 'Máy chủ ngừng hoạt động!');
+                alert('error', 'Server Down!');
             }
         }
         xhr.send('rem_feature=' + val);
@@ -281,7 +281,7 @@
     function add_facility() {
         let data = new FormData();
         data.append('name', facility_s_form.elements['facility_name'].value);
-        data.append('icon', facility_s_form.elements['facility_icon'].value);
+        data.append('icon', facility_s_form.elements['facility_icon'].files[0]);
         data.append('desc', facility_s_form.elements['facility_desc '].value);
         data.append('add_feature', '');
 
@@ -302,16 +302,49 @@
             } else {
                 alert('success', 'New facility added!');
                 facility_s_form.reset();
-                // get_members();
+                get_facilities();
             }
         }
         xhr.send(data);
     }
 
 
+    function get_facilities() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "ajax/features_facilities.php", true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onload = function() {
+            document.getElementById('facilities-data').innerHTML = this.responseText;
+        }
+        xhr.send('get_facilities');
+    }
+
+
+    function rem_facility(val) {
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "ajax/features_facilities.php", true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onload = function() {
+            if (this.responseText == 1) {
+                alert('success', 'Facility removed!');
+                get_features();
+            } else if (this.responseText == 'room_added') {
+
+                alert('error', 'Facility is added in the room!');
+            } else {
+                alert('error', 'Server Down!');
+            }
+        }
+        xhr.send('rem_facility=' + val);
+    }
+
 
     window.onload = function() {
         get_features();
+        get_facilities();
     }
     </script>
 
