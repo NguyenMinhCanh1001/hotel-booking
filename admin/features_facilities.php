@@ -163,7 +163,7 @@
                     <div class="modal-footer">
                         <button type="reset" class="btn text-secondary shadow-none"
                             data-bs-dismiss="modal">Đóng</button>
-                        <button type="submit" class="btn text-secondary shadow-none custom-bg">Đồng ý</button>
+                        <button type="submit" class="btn text-secondary shadow-none">Đồng ý</button>
                     </div>
                 </div>
             </form>
@@ -270,7 +270,7 @@
                 alert('error', 'Server Down!');
             }
         }
-        xhr.send('rem_feature' + val);
+        xhr.send('rem_feature=' + val);
     }
 
     facility_s_form.addEventListener('submit', function(e) {
@@ -282,8 +282,8 @@
         let data = new FormData();
         data.append('name', facility_s_form.elements['facility_name'].value);
         data.append('icon', facility_s_form.elements['facility_icon'].files[0]);
-        data.append('desc', facility_s_form.elements['facility_desc'].value);
-        data.append('add_facility', '');
+        data.append('desc', facility_s_form.elements['facility_desc '].value);
+        data.append('add_feature', '');
 
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "ajax/features_facilities.php", true);
@@ -338,7 +338,7 @@
                 alert('error', 'Server Down!');
             }
         }
-        xhr.send('rem_facility' + val);
+        xhr.send('rem_facility=' + val);
     }
 
 
