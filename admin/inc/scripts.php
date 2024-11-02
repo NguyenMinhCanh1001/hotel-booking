@@ -21,12 +21,12 @@ function alert(type, msg) {
     document.body.append(element);
 
 
-    // setTimeout(() => {
-    //     let alertToRemove = bootstrap.Alert.getOrCreateInstance(element.firstChild);
-    //     alertToRemove.close();
-    // }, 3000);
+    setTimeout(() => {
+        let alertToRemove = bootstrap.Alert.getOrCreateInstance(element.firstChild);
+        alertToRemove.close();
+    }, 3000);
 
-    setTimeout(remAlert, 2000);
+    setTimeout(remAlert, 3000);
 }
 
 function remAlert() {
