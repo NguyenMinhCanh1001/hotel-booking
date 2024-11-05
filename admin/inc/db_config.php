@@ -1,6 +1,6 @@
 <?php 
 
-    $hname ='localhost:3308';
+    $hname ='localhost';
     $uname = 'root';
     $pass = '';
     $db = 'bookinghotel';
