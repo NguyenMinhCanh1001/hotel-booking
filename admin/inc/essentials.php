@@ -5,11 +5,14 @@
     define('ABOUT_IMG_PATH',SITE_URL.'images/GioiThieu/');
     define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
     define('FACILITIES_IMG_PATH',SITE_URL.'images/facilities/');
+    define('ROOMS_IMG_PATH',SITE_URL.'images/Phong/');
+
     // backend upload process need this data
     define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/images/');
     define('ABOUT_FOLDER', 'GioiThieu/');
     define('CAROUSEL_FOLDER', 'carousel/');
     define('FACILITIES_FOLDER', 'facilities/');
+    define('ROOMS_FOLDER', 'Phong/');
 
     
     function adminLogin()

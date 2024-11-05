@@ -3,7 +3,7 @@
 </script>
 
 <script>
-function alert(type, msg) {
+function alert(type, msg, position = 'body') {
     let existingAlert = document.querySelector('.custom-alert');
     if (existingAlert) {
         let alertInstance = bootstrap.Alert.getOrCreateInstance(existingAlert);
@@ -13,25 +13,32 @@ function alert(type, msg) {
 
     let bs_class = (type == 'success') ? 'alert-success' : 'alert-danger';
     let element = document.createElement('div');
-    element.innerHTML = `<div class="alert ${bs_class} alert-dismissible fade show custom-alert" role="alert">
+    element.innerHTML = `<div class="alert ${bs_class} alert-dismissible fade show" role="alert">
                     <strong class="me-3">${msg}</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>`;
 
-    document.body.append(element);
-
+    if (position == 'body') {
+        document.body.append(element);
+        element.classList.add('custom-alert');
+    } 
+    else {
+        document.getElementById(position).appendChild(element);
+    }
 
     setTimeout(() => {
         let alertToRemove = bootstrap.Alert.getOrCreateInstance(element.firstChild);
         alertToRemove.close();
+        
+        setTimeout(() => {
+            if (element && element.parentNode) {
+                element.remove();
+            }
+        }, 150);
     }, 3000);
-
-    setTimeout(remAlert, 3000);
 }
 
-function remAlert() {
-    document.getElementsByClassName('alert')[0].remove();
-}
+
 
 function setActivie() {
     let navbar = document.getElementById('dashboard-menu');
