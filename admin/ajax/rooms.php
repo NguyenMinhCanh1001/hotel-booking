@@ -18,7 +18,7 @@ if (isset($_POST['add_room']))
 
     $values = [$frm_data['name'], $frm_data['area'], $frm_data['price'], $frm_data['quantity'], $frm_data['adult'], $frm_data['children'], $frm_data['desc']];
 
-    if(insert($q1,$values,'siiiiis')){
+    if(insert($q1,$values,'sisiiis')){
         $flag = 1;
     } 
 
@@ -157,7 +157,7 @@ if (isset($_POST['edit_room']))
 
     $values = [$frm_data['name'], $frm_data['area'], $frm_data['price'], $frm_data['quantity'], $frm_data['adult'], $frm_data['children'], $frm_data['desc'],$frm_data['room_id']];
 
-    if(update($q1,$values,'siiiiisi')){
+    if(update($q1,$values,'sisiiisi')){
         $frm_data = 1;
     }
 
@@ -320,6 +320,7 @@ if (isset($_POST['romve_room'])) {
     $res4 = delete("DELETE FROM `room_facilities` WHERE `room_id` = ?", [$frm_data['room_id']], 'i');
 
     $res5 = update("UPDATE `rooms` SET `removed` = ? WHERE `id` = ?", [1, $frm_data['room_id']], 'ii');
+    
 
     if($res2 && $res3 && $res4 && $res5){
         echo 1;
