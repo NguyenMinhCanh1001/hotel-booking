@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTH HOTEL - Chi tiết phòng</title>
-  <?php require('inc/links.php')?>
+    <?php require('inc/links.php')?>
+    <title><?php echo $settings_r['site_title'] ?> - Chi tiết phòng</title>
+
   
 </head>
 <body class="bg-light">
