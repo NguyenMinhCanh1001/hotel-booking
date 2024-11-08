@@ -13,6 +13,7 @@
     define('CAROUSEL_FOLDER', 'carousel/');
     define('FACILITIES_FOLDER', 'facilities/');
     define('ROOMS_FOLDER', 'Phong/');
+    define('USERS_FOLDER', 'users/');
 
     
     function adminLogin()
@@ -118,4 +119,43 @@
             }
         }
     }
+
+    function uploadUserImage($image){
+        $valid_mime = ['image/jpeg', 'image/png', 'image/webp'];
+        $img_mime = $image['type'];
+    
+        if (!in_array($img_mime, $valid_mime)) {
+            return 'inv_img';
+        } 
+    
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $rname = 'IMG_' . random_int(11111, 99999) . ".$ext";
+        
+        $img_path = UPLOAD_IMAGE_PATH . USERS_FOLDER;
+    
+        if (!is_dir($img_path)) {
+            mkdir($img_path, 0777, true); 
+        }
+    
+        $img_path .= $rname;
+    
+        if ($ext === 'png' || $ext === 'PNG') {
+            $img = imagecreatefrompng($image['tmp_name']);
+        }
+         else if ($ext === 'webp' || $ext === 'WEBP') {
+            $img = imagecreatefromwebp($image['tmp_name']);
+        } 
+        else {
+            $img = imagecreatefromjpeg($image['tmp_name']);
+        }
+    
+        if (imagejpeg($img, $img_path, 75)) {
+            imagedestroy($img); 
+            return $rname;
+        } else {
+            imagedestroy($img); 
+            return 'upload_failed';
+        }
+    }
+    
 ?>

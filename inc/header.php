@@ -1,20 +1,9 @@
-    <?php
-      require('admin/inc/db_config.php');
-      require('admin/inc/essentials.php');
-
-      $contact_q = "SELECT * FROM `contact_details` WHERE sr_no = ?";
-      $values = [1];
-      $contact_r = mysqli_fetch_assoc(select($contact_q, $values, 'i'));
-      
-    ?>
-
-
 
 
     <!-- mục lục -->
     <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-dark px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand me-5 pacifico-regular text-white" href="index.php">UTH HOTEL</a>
+            <a class="navbar-brand me-5 pacifico-regular text-white" href="index.php"><?php echo $settings_r['site_title'] ?></a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -94,7 +83,7 @@
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form>
+                <form id="register-form">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-add fs-3 me-2"></i>
@@ -112,51 +101,47 @@
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Họ</label>
-                                    <input type="text" class="form-control shadow-none">
+                                    <input name="name" type="text" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0">
-                                    <label class="form-label">Tên</label>
-                                    <input type="text" class="form-control shadow-none">
+                                    <label class="form-label">Email đăng nhập</label>
+                                    <input name="email" type="email" class="form-control shadow-none" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email đăng nhập</label>
-                            <input type="email" class="form-control shadow-none">
                         </div>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Số điện thoại</label>
-                                    <input type="number" class="form-control shadow-none">
+                                    <input name="phonenum" type="number" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0">
                                     <label class="form-label">Ảnh của bạn</label>
-                                    <input type="file" class="form-control shadow-none">
+                                    <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Địa chỉ</label>
-                            <textarea class="form-control shadow-none" rows="1"></textarea>
+                            <textarea name="address" class="form-control shadow-none" rows="1" required></textarea>
                         </div>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Pincode</label>
-                                    <input type="number" class="form-control shadow-none">
+                                    <input name="pincode" type="number" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0">
                                     <label class="form-label">Ngày sinh</label>
-                                    <input type="date" class="form-control shadow-none">
+                                    <input name="dob" type="date" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Mật Khẩu</label>
-                                    <input type="password" class="form-control shadow-none">
+                                    <input name="pass" type="password" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0">
                                     <label class="form-label">Nhập lại mật khẩu</label>
-                                    <input type="password" class="form-control shadow-none">
+                                    <input name="cpass" type="password" class="form-control shadow-none" required>
                                 </div>
                             </div>
                         </div>
