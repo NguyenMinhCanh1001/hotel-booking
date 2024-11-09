@@ -6,6 +6,7 @@
     define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
     define('FACILITIES_IMG_PATH',SITE_URL.'images/facilities/');
     define('ROOMS_IMG_PATH',SITE_URL.'images/Phong/');
+    define('USERS_IMG_PATH',SITE_URL.'images/users/');
 
     // backend upload process need this data
     define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/images/');
@@ -14,6 +15,8 @@
     define('FACILITIES_FOLDER', 'facilities/');
     define('ROOMS_FOLDER', 'Phong/');
     define('USERS_FOLDER', 'users/');
+    define('SENDGRID_EMAIL', 'phamtuan7592@gmail.com');
+    define('SENDGRID_NAME', 'Tuandeptra');
 
     
     function adminLogin()
