@@ -20,17 +20,19 @@
                         <a class="nav-link text-white" href="dashboard.php">Bảng điều khiển</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="users.php">Khách hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="user_queries.php">Truy vấn Khách hàng</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="rooms.php">Phòng</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="features_facilities.php">Tính năng và tiện nghi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="user_queries.php">Truy vấn người dùng</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="carousel.php">Người dùng</a>
+                        <a class="nav-link text-white" href="carousel.php">Ảnh bìa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="settings.php">Cài đặt</a>

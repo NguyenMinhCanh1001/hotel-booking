@@ -118,6 +118,12 @@
             $thumb_res = mysqli_fetch_assoc($thumb_q);
             $room_thumb = ROOMS_IMG_PATH.$thumb_res['image'];
           }
+          
+          $book_btn = "";
+
+          if(!$settings_r['shutdown']){
+            $book_btn= "<a href='#' class='btn btn-sm text-white custom-bg shadow-none'>Đặt phòng</a>";
+          }
 
           //print room card
           echo <<<data
@@ -155,7 +161,7 @@
                             </span>
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                            $book_btn
                             <a href="room_details.php?id=$room_data[id]" class="btn btn-sm btn btn-outline-primary shadow-none ">Xem chi tiết</a>
                         </div>
                     </div>
