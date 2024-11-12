@@ -57,6 +57,23 @@ if (isset($vnp_BankCode) && $vnp_BankCode != "") {
     $inputData['vnp_BankCode'] = $vnp_BankCode;  // Thêm mã ngân hàng vào tham số nếu có
 }
 
+
+    $frm_data = filteration($_POST);
+    
+    $query1 = "INSERT INTO booking_order (user_id, room_id, check_in, check_out, order_id) 
+            VALUES (?, ?, ?, ?, ?)";
+    
+    insert($query1, [$CUST_ID, $_SESSION['room']['id'],$frm_data['Checkin'], $frm_data['Checkout'], $vnp_TxnRef],'issss');
+    
+    $booking_id = mysqli_insert_id($con);
+    
+    $query2 = "INSERT INTO booking_details ( booking_id, room_name, price, total_pay, user_name, phonenum, address) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    
+    insert($query2,[$booking_id, $_SESSION['room']['name'], $_SESSION['room']['price'], $vnp_Amount, $frm_data['name'],$frm_data['phonenum'],$frm_data['address']],'issssss');
+
+
+
 // Sắp xếp các tham số theo thứ tự từ điển
 ksort($inputData);
 
@@ -90,37 +107,23 @@ if (isset($vnp_HashSecret)) {
     $vnp_Url .= 'vnp_SecureHash=' . $vnpSecureHash;
 }
 
+
+
 // Xử lý các tham số trả về sau khi thanh toán
 $STATUS = $_GET['vnp_ResponseCode'] ?? null;  // Mã phản hồi giao dịch == 0 là đúng
 $CUST_ID = $_GET['vnp_TransactionNo'] ?? null;  // Mã giao dịch khách hàng
 $DATA = $_GET['vnp_PayDate'] ?? null;  // Ngày giao dịch
 $DISC = $_GET['vnp_OrderInfo'] ?? null;  // Nội dung giao dịch
 
+
+
 $returnData = array('code' => '00'
         , 'message' => 'success'
         , 'data' => $vnp_Url);
         if (isset($_POST['pay_now'])) {
-            $frm_data = filteration($_POST);
-
-            $query1 = "INSERT INTO booking_order (user_id, room_id, check_in, check_out, order_id) 
-                    VALUES (?, ?, ?, ?, ?)";
-
-            insert($query1, [$CUST_ID, $_SESSION['room']['id'],$frm_data['Checkin'], $frm_data['Checkout'], $vnp_TxnRef],'issss');
-
-            $booking_id = mysqli_insert_id($con);
-
-            $query2 = "INSERT INTO booking_details ( booking_id, room_name, price, total_pay, user_name, phonenum, address) 
-                    VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-            insert($query2,[$booking_id, $_SESSION['room']['name'], $_SESSION['room']['price'], $vnp_Amount, $frm_data['name'],$frm_data['phonenum'],$frm_data['address']],'issssss');
-        
             header('Location: ' . $vnp_Url);
         } else {
             echo json_encode($returnData);
         }
-
-
-        
-        
 
 ?>
