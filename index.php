@@ -121,9 +121,14 @@
           
           $book_btn = "";
 
-          if(!$settings_r['shutdown']){
-            $book_btn= "<a href='#' class='btn btn-sm text-white custom-bg shadow-none'>Đặt phòng</a>";
-          }
+          if (!$settings_r['shutdown']) {
+            $login = 0;
+            if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+                $login = 1;
+            }
+        
+            $book_btn = "<button onclick='checkLoginToBook($login, $room_data[id])' class='btn btn-sm text-white custom-bg shadow-none'>Đặt phòng</button>";
+        }       
 
           //print room card
           echo <<<data
