@@ -1,34 +1,47 @@
-function get_users()
+function get_bookings()
 {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/users.php", true);
+    xhr.open("POST", "ajax/new_bookings.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function() {
-        document.getElementById('users-data').innerHTML = this.responseText;
+        document.getElementById('table-data').innerHTML = this.responseText;
     }
-        xhr.send('get_users'); 
+        xhr.send('get_bookings'); 
 }
 
+let assign_room_form= document.getElementById('assign_room_form');
+function assign_room(id){
+    assign_room_form.elements['booking_id'].value=id;
+}
 
-function toggle_status(id, val) 
-{
+assign_room_form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    let data = new FormData();
+    data.append('room_no', assign_room_form.elements['room_no'].value);
+    data.append('booking_id', assign_room_form.elements['booking_id'].value);
+    data.append('assign_room','');
+
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/users.php", true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.open("POST", "ajax/new_bookings.php", true);
 
     xhr.onload = function() {
+        var myModal = document.getElementById('assign-room');
+        var modal = bootstrap.Modal.getInstance(myModal);
+        modal.hide();
+
         if (this.responseText == 1) {
-            alert('success', 'Trạng thái đã được chuyển đổi!');
-        
-            get_users(); 
+            alert('success', 'Room number Alloted! Booking Finalized');
+            assign_room_form.reset();
+            get_bookings();
         } else {
-            alert('error', 'Server đã đóng!');
+            alert('error', 'Server Down!');
         }
-    }
-    xhr.send('toggle_status=' + id + '&value=' + val);
-}
 
+    }
+    xhr.send(data);
+});
 
 function romve_users(user_id) {
     if (confirm("Bạn có chắc chắn muốn xóa tài khoản này không?")) {  
@@ -67,5 +80,5 @@ function search_user(username){
 
 window.onload = function()
 {
-    get_users(); 
+    get_bookings(); 
 }
