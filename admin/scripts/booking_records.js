@@ -7,20 +7,21 @@ function get_bookings(search= '', page = 1)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function() {
-        document.getElementById('table-data').innerHTML = this.responseText;
+        let data=JSON.parse(this.responseText);
+        document.getElementById('table-data').innerHTML = data.table_data;
+        document.getElementById('table-pagination').innerHTML = data.pagination;
     }
         xhr.send('get_bookings&search=' + search + '&page=' +page); 
 }
 
-let assign_room_form= document.getElementById('assign_room_form');
-function assign_room(id){
-    assign_room_form.elements['booking_id'].value=id;
+
+function change_page(page){
+    get_bookings(document.getElementById('search_input').value,page);
 }
 
-
-
-
-
+function download(id){
+    window.location.href='genarate_pdf.php?gen_pdf&id'+id;
+}
 
 window.onload = function()
 {
