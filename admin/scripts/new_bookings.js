@@ -46,7 +46,7 @@ assign_room_form.addEventListener('submit',function(e){
 });
 
 function cancel_booking(id){
-    if (confirm("Bạn có chắc chắn muốn xóa phòng đã đặt này không?")) {  
+    if (confirm("Bạn có chắc chắn muốn hủy phòng đã đặt này không?")) {  
         let data = new FormData();
         data.append('booking_id', id);
         data.append('cancel_booking', '');

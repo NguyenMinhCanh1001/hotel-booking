@@ -38,7 +38,7 @@
                         echo <<<data
                             <div class="btn-group">
                                 <button type="button" class="btn btn-secondary shadow-none dropdown-toggle custom-dropdown-button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                    <img src="$path$_SESSION[uPic]" style="width: 25px; height: 25px;" class="me-1">
+                                    <img src="$path$_SESSION[uPic]" style="width: 25px; height: 25px;" class="me-1 rounded-circle">
                                     $_SESSION[uName]
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-lg-end custom-dropdown-menu">
@@ -124,7 +124,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Họ</label>
+                                    <label class="form-label">Họ và tên</label>
                                     <input name="name" type="text" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 p-0">
