@@ -20,7 +20,7 @@ function change_page(page){
 }
 
 function download(id){
-    window.location.href='genarate_pdf.php?gen_pdf&id'+id;
+    window.location.href = 'generate_pdf.php?gen_pdf&id=' + id;
 }
 
 window.onload = function()

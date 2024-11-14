@@ -2,6 +2,7 @@
 
 require('inc/essentials.php');
 require('inc/db_config.php');
+require('inc/mpdf/vendor/autoload.php');
 adminLogin();
 
 if (isset($_GET['gen_pdf']) && isset($_GET['id'])) {
@@ -59,7 +60,7 @@ if (isset($_GET['gen_pdf']) && isset($_GET['id'])) {
         </tr>
         ";
     if($data['booking_status']=='cancelled'){
-        $refund = ($data['rèund']) ? "Amount Refunded" : "not yet Refunded";
+        $refund = ($data['refund']) ? "Amount Refunded" : "not yet Refunded";
         
         $table_data.="<tr>
             <td>Amount Paid: $data[trans_amt]</td>
@@ -73,14 +74,24 @@ if (isset($_GET['gen_pdf']) && isset($_GET['id'])) {
     </tr>";
     }
     else{
-        $table_data.="<tr>
-        <td>Room number : $data[room_no]</td>
-        <td>Amount Paid: $data[trans_amt]</td>
+        $table_data .= "<tr>
+        <td>Room number: {$data['room_no']}</td>
+        <td>Amount Paid: " . number_format($data['trans_amt'], 0, '', '.') . "</td>
     </tr>";
+
     }
     $table_data.="</table>";
 
+
+    $mpdf = new \Mpdf\Mpdf();
+
+    $mpdf->WriteHTML($table_data);
+    
+    
+    $mpdf->Output($data['order_id'] . '.pdf', 'D');
+    
     echo $table_data;
+    
 } else {
     header('location: dashboard.php');
 }
