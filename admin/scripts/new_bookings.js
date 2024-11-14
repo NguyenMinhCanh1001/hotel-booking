@@ -1,6 +1,6 @@
 function get_bookings(search= '')
 {
-    $frm_data = filteration($_POST);
+    
         
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/new_bookings.php", true);
