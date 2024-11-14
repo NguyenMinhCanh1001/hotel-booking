@@ -57,7 +57,7 @@ if (isset($_POST['get_bookings'])) {
                   <b>Date:</b> $date
              </td>
              <td>
-                <b>Paid:</b> {$data['trans_amt']}VNĐ
+                <b>Paid:</b> " . number_format($data['trans_amt'], 0, '', '.') . "VNĐ
             </td>
               <td>
                 <button type='button' onclick='refund_booking($data[booking_id])' class='btn btn-success btn-sm fw-bold shadow-none'>

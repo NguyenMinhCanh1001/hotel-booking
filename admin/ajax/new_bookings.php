@@ -50,7 +50,7 @@ if (isset($_POST['get_bookings'])) {
                 <br>
                 <b>Check out:</b> $checkout
                 <br>
-                <b>Paid:</b> {$data['trans_amt']}VNĐ
+                <b>Paid:</b> " . number_format($data['trans_amt'], 0, '', '.') . "VNĐ
                 <br>
                 <b>Date:</b> $date
             </td>
@@ -94,7 +94,7 @@ if (isset($_POST['cancel_booking'])) {
     $values = ['cancelled', 0, $frm_data['booking_id']]; 
 
     $res = update($query, $values, 'sii');
-    echo ($res == 2) ? 1 : 0;
+    echo $res;
 }
 
 if (isset($_POST['search_user'])) {

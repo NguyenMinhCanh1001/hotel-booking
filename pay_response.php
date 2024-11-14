@@ -69,7 +69,7 @@
         if ($_GET['vnp_ResponseCode'] == '00') 
         {
             $trans_id = $_GET['vnp_TransactionNo'];
-            $trans_amt = $_GET['vnp_Amount'];
+            $trans_amt = $_GET['vnp_Amount'] / 100;
             $trans_status = $_GET['vnp_ResponseCode'];
             $trans_resp_msg = $_GET['vnp_OrderInfo'];
 

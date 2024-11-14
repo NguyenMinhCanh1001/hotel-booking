@@ -68,9 +68,6 @@ function cancel_booking(id){
 
 
 
-
-
-
 window.onload = function()
 {
     get_bookings(); 
