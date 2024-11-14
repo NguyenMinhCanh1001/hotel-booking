@@ -80,8 +80,7 @@
     <div class="container-fluid" id="main-content">
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-                <h3 class="mb-4">Đặt phòng mới</h3>
-
+                <h3 class="mb-4">Hoàn tiền đặt phòng</h3>
                 <div class="card border-0 shadow mb-4">
                     <div class="card-body">
 
@@ -96,7 +95,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Chi tiết khách hàng</th>
                                         <th scope="col">Chi tiết phòng</th>
-                                        <th scope="col">Chi tiết đặt phòng</th>
+                                        <th scope="col">Số tiết hoàn tiền</th>
                                         <th scope="col">Yêu cầu</th>
                                     </tr>
                                 </thead>
@@ -109,44 +108,11 @@
                 </div>
 
 
- <!-- Assign Room Number  modal-->
- <div class=" modal fade" id="assign-room" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
-                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <form id="assign_room_form">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Assign Room</h5>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label class="form-label fw-bold ">Số phòng </label>
-                                        <input type="text" name="room_no" class="form-control shadow-none" required>
-                                    </div>
-                                    <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
-                                         Chú ý:assign room number only when user has been arrived!
-                                    </span>
-                                    <input type="hidden" name="booking_id">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="reset" class="btn text-secondary shadow-none"
-                                        data-bs-dismiss="modal">Đóng</button>
-                                    <button type="submit" class="btn custom-bg text-white shadow-none">Assign</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
 
+<?php require('inc/scripts.php'); ?>
 
-
-
-    
-
-    <?php require('inc/scripts.php'); ?>
-
-    <script src="scripts/new_bookings.js"> </script> 
+<script src="scripts/refund_bookings.js"> </script> 
 
 </body>
 

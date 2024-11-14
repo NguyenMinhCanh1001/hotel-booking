@@ -46,7 +46,7 @@
                    <i class="bi bi-check-circle-fill"></i>
                    Thanh toán thành công! Đặt phòng thành công.
                    <br><br>
-                   <a href='bookings.php'>Quay lại trang đặt phòng</a>
+                   <a href='rooms.php'>Quay lại trang đặt phòng</a>
                 </p>
             </div>
           data;
@@ -58,7 +58,7 @@
                     <i class="bi bi-x-octagon-fill"></i>
                     Thanh toán thất bại! $booking_fetch[trans_resp_msg]
                     <br><br>
-                    <a href='bookings.php'>Quay lại trang đặt phòng</a>
+                    <a href='rooms.php'>Quay lại trang đặt phòng</a>
                   </p>
               </div>
             data;

@@ -29,6 +29,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="new_bookings.php">Đặt phòng mới</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="refund_bookings.php">Hoàn tiền đặt phòng</a>
+                        </li>
                         </ul>
                     </div>
                     </li>

@@ -1,5 +1,7 @@
-function get_bookings()
+function get_bookings(search= '')
 {
+    $frm_data = filteration($_POST);
+        
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/new_bookings.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -7,7 +9,7 @@ function get_bookings()
     xhr.onload = function() {
         document.getElementById('table-data').innerHTML = this.responseText;
     }
-        xhr.send('get_bookings'); 
+        xhr.send('get_bookings&search=' + search); 
 }
 
 let assign_room_form= document.getElementById('assign_room_form');
@@ -43,38 +45,29 @@ assign_room_form.addEventListener('submit',function(e){
     xhr.send(data);
 });
 
-function romve_users(user_id) {
-    if (confirm("Bạn có chắc chắn muốn xóa tài khoản này không?")) {  
-    let data = new FormData();
-    data.append('user_id', user_id);
-    data.append('romve_users', '');
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/users.php", true);
-
-    xhr.onload = function() {
-        if (this.responseText == 1) {
-            alert('success', 'Phòng đã được xóa!');
-            get_users();
-        } else {
-            alert('error', 'Xóa tài khoản không thành công!', 'image-alert');
+function cancel_booking(id){
+    if (confirm("Bạn có chắc chắn muốn xóa phòng đã đặt này không?")) {  
+        let data = new FormData();
+        data.append('booking_id', id);
+        data.append('cancel_booking', '');
+    
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "ajax/new_bookings.php", true);
+    
+        xhr.onload = function() {
+            if (this.responseText == 1) {
+                alert('success', 'Phòng đã đặt được hủy!');
+                get_bookings();
+            } else {
+                alert('error', 'Xóa phòng đã đặt không thành công!', 'image-alert');
+            }
         }
-    }
-    xhr.send(data);
-}
+            xhr.send(data);
+        }
 }
 
-function search_user(username){
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/users.php", true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload = function() {
-        document.getElementById('users-data').innerHTML = this.responseText;
-    }
-    xhr.send('search_user=true&name=' + encodeURIComponent(username));
- 
-}
+
 
 
 
