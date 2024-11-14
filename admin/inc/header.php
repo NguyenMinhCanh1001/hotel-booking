@@ -1,11 +1,12 @@
-</style>
+
+<?php require('inc/links.php'); ?>
 <div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between sticky-top">
-    <h3 class="mb-0-font">Bảng điều khiển quản trị</h3>
+    <h3 class="mb-0 h-font">Bảng điều khiển quản trị</h3>
     <a href="logout.php" class="btn btn-light btn-sm poppins-medium">Đăng xuất</a>
 </div>
 
 <div class="col-lg-2 bg bg-dark border-top border-3 border-secondary" id="dashboard-menu">
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid flex-lg-column align-items-stretch">
             <h4 class="mt-2 text-light">Lựa chọn</h4>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
@@ -32,6 +33,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="refund_bookings.php">Hoàn tiền đặt phòng</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="booking_records.php">Hồ sơ đặt phòng</a>
+                        </li>
                         </ul>
                     </div>
                     </li>
@@ -53,6 +57,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="settings.php">Cài đặt</a>
                     </li>
+                    
 
                 </ul>
             </div>

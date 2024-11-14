@@ -4,31 +4,52 @@ require('../inc/essentials.php');
 adminLogin();
 
 if (isset($_POST['get_bookings'])) {
+
     $frm_data = filteration($_POST);
+
+    $limit = 1;
+    $page = $frm_data['page'];
+    $start = ($page-1) * $limit;
+
 
     $query = "SELECT bo.*, bd.* FROM `booking_order` bo
     INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
-    WHERE (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
-    AND (bo.booking_status = ? AND bo.arrival = ?) 
-    ORDER BY bo.booking_id ASC";
+    WHERE (
+        (bo.booking_status = 'booked' AND bo.arrival = 1) 
+        OR (bo.booking_status = 'cancelled' AND bo.refund = 1)
+        OR (bo.booking_status = 'payment failed')
+    ) 
+    AND (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
+    ORDER BY bo.booking_id DESC";
 
 
-    $res = select($query, ["%$frm_data[search]%", "%$frm_data[search]%", "%$frm_data[search]%", "booked", 0], 'sssss');
+    $res = select($query, ["%{$frm_data['search']}%", "%{$frm_data['search']}%", "%{$frm_data['search']}%"], 'sss');
+
+    $limit_query = $query . " LIMIT $start, $limit";
+
+    $limit_res = select($limit_query, ["%{$frm_data['search']}%", "%{$frm_data['search']}%", "%{$frm_data['search']}%"], 'sss');
 
     $i = 1;
     $table_data = "";
+
+    $total_rows = mysqli_num_rows($res);
     
-    if (!$res || mysqli_num_rows($res) == 0) {
-        echo "<b>Không dữ liệu!</b>";
+    if ($total_rows == 0) {
+        $output = json_encode(["table_data" => "<b>Không dữ liệu!</b>","pagination"=>'']);
+        echo $output;
         exit;
     }
 
- 
 
-    while ($data = mysqli_fetch_assoc($res)) {
+    
+    while ($data = mysqli_fetch_assoc($limit_res)) {
         $date = date("d-m-Y", strtotime($data['datetime']));
         $checkin = date("d-m-Y", strtotime($data['check_in']));
         $checkout = date("d-m-Y", strtotime($data['check_out']));
+
+        if($data['booking_status'] == 'booked'){
+            $status_bg = '';
+        }
     
         $table_data .= "
         <tr>

@@ -69,7 +69,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đặt phòng mới</title>
+    <title>Hồ sơ đặt phòng</title>
     <?php require('inc/links.php'); ?>
 </head>
 
@@ -80,7 +80,8 @@
     <div class="container-fluid" id="main-content">
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-                <h3 class="mb-4">Hoàn tiền đặt phòng</h3>
+                <h3 class="mb-4">Hồ sơ đặt phòng</h3>
+
                 <div class="card border-0 shadow mb-4">
                     <div class="card-body">
 
@@ -89,13 +90,14 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table class=" table table-hover border" style="min-width: 1200px;">
+                            <table class=" table table-hover border" style="min-width: 1200px;" >
                                 <thead>
                                     <tr class="bg-dark text-light" >
                                         <th scope="col">#</th>
                                         <th scope="col">Chi tiết khách hàng</th>
                                         <th scope="col">Chi tiết phòng</th>
-                                        <th scope="col">Số tiết hoàn tiền</th>
+                                        <th scope="col">Chi tiết đặt phòng</th>
+                                        <th scope="col">Trạng Thái</th>
                                         <th scope="col">Yêu cầu</th>
                                     </tr>
                                 </thead>
@@ -103,20 +105,15 @@
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <?php require('inc/scripts.php'); ?>
 
-
-
-<?php require('inc/scripts.php'); ?>
-
-<script src="scripts/refund_bookings.js"> </script> 
-
-</body>
+    <script src="scripts/booking_records.js"> </script> 
+ 
 
 </html>

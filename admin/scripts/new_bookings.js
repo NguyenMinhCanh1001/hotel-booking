@@ -1,7 +1,6 @@
 function get_bookings(search= '')
 {
     
-        
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/new_bookings.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -13,6 +12,7 @@ function get_bookings(search= '')
 }
 
 let assign_room_form= document.getElementById('assign_room_form');
+
 function assign_room(id){
     assign_room_form.elements['booking_id'].value=id;
 }
