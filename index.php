@@ -77,7 +77,7 @@
     <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Phòng</h2>
     <div class="container">
         <div class="row">
-        <?php 
+            <?php 
         $room_res = select("SELECT * FROM `rooms` WHERE `status` = ? AND `removed` = ?  ORDER BY `id` DESC LIMIT 3",[1,0],'ii');
 
         while($room_data = mysqli_fetch_assoc($room_res))
@@ -114,14 +114,14 @@
           WHERE `room_id` = '$room_data[id]' 
           AND `thumb` = '1'");
 
-          if(mysqli_num_rows($thumb_q) > 0){
+        if(mysqli_num_rows($thumb_q) > 0){
             $thumb_res = mysqli_fetch_assoc($thumb_q);
             $room_thumb = ROOMS_IMG_PATH.$thumb_res['image'];
-          }
+        }
           
           $book_btn = "";
 
-          if (!$settings_r['shutdown']) {
+        if (!$settings_r['shutdown']) {
             $login = 0;
             if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
                 $login = 1;
@@ -129,6 +129,28 @@
         
             $book_btn = "<button onclick='checkLoginToBook($login, $room_data[id])' class='btn btn-sm text-white custom-bg shadow-none'>Đặt phòng</button>";
         }
+        
+
+        $rating_q = "SELECT AVG(rating) AS `avg_rating` FROM `rating_review`
+            WHERE `room_id`= '$room_data[id]' ORDER BY `sr_no` DESC LIMIT 20";
+            
+        $rating_res = mysqli_query($con,$rating_q);
+        $rating_fetch = mysqli_fetch_assoc($rating_res);
+
+        $rating_data = "";
+        
+        if($rating_fetch['avg_rating']!=NULL){
+            $rating_data = "<div class='rating mb-4'>
+                            <h6 class='mb-1'>Đánh giá</h6>
+                            <span class='badge rounded-pill bg-light'>";
+
+            for($i=0; $i<$rating_fetch['avg_rating'];$i++){
+                $rating_data .= "<i class='bi bi-star-fill text-warning'></i> ";
+            }
+            $rating_data .= "<span>
+                </div>";
+        }
+
         
 
           //print room card
@@ -157,15 +179,7 @@
                                 $room_data[children] trẻ con
                             </span>
                         </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Đánh giá</h6>
-                            <span class="badge rounded-pill bg-light">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i>
-                            </span>
-                        </div>
+                        $rating_data
                         <div class="d-flex justify-content-evenly mb-2">
                             $book_btn
                             <a href="room_details.php?id=$room_data[id]" class="btn btn-sm btn btn-outline-primary shadow-none ">Xem chi tiết</a>
@@ -192,7 +206,7 @@
     <h2 class="mt-5 pt-4 mb-4 text-center merienda-header">Tiện nghi khách sạn</h2>
     <div class="container">
         <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-        <?php
+            <?php
                 $res= mysqli_query($con,"SELECT * FROM `facilities` ORDER BY `id` DESC LIMIT 5");
                 $path = FACILITIES_IMG_PATH;
 
@@ -206,7 +220,8 @@
                 }
           ?>
             <div class="col-lg-12 text-center mt-5">
-                <a href="facilities.php" class="btn btn-sm btn-outline-dark rounded-0 poppins-medium ">Thêm tiện nghi</a>
+                <a href="facilities.php" class="btn btn-sm btn-outline-dark rounded-0 poppins-medium ">Thêm tiện
+                    nghi</a>
             </div>
         </div>
     </div>
@@ -216,55 +231,45 @@
     <div class="container mt-5">
         <div class="swiper swiper-testimonial ">
             <div class="swiper-wrapper mb-5">
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-4 ">
-                        <img src="/images/TienNghi/star.png" width="30px" height="">
-                        <h6 class="m-0 ms-2">Phong 1</h6>
-                    </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nemo recusandae saepe
-                        accusamus rem eligendi itaque vitae quas laborum ducimus?
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-half text-warning"></i>
-                    </div>
-                </div>
 
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-4 ">
-                        <img src="/images/TienNghi/star.png" width="30px" height="">
-                        <h6 class="m-0 ms-2">Phong 1</h6>
-                    </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nemo recusandae saepe
-                        accusamus rem eligendi itaque vitae quas laborum ducimus?
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-half text-warning"></i>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-4 ">
-                        <img src="/images/TienNghi/star.png" width="30px" height="">
-                        <h6 class="m-0 ms-2">Phong 1</h6>
-                    </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nemo recusandae saepe
-                        accusamus rem eligendi itaque vitae quas laborum ducimus?
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-half text-warning"></i>
-                    </div>
-                </div>
+                <?php
+                $review_q ="SELECT rr.*,uc.name AS uname, r.name AS rname FROM `rating_review` rr
+                    INNER JOiN `user_cred` uc ON rr.user_id= uc.id
+                    INNER JOIN `rooms` r ON rr.room_id = r.id
+                    ORDER BY `sr_no` DESC LIMIT 6";
+
+                    $review_res = mysqli_query($con,$review_q);
+                    $img_path = USERS_IMG_PATH;
+
+                    if(mysqli_num_rows($review_res)==0){
+                        echo 'No reviews yet!';
+                    }
+                    else{
+                        while($row = mysqli_fetch_assoc($review_res))
+                        {
+                            $stars = "<i class='bi bi-star-fill text-warning'></i> ";
+                            for($i=1; $i <$row['rating'];$i++){
+                                $stars .= " <i class='bi bi-star-fill text-warning'></i>";
+                            }
+
+                            echo<<<slides
+                            <div class="swiper-slide bg-white p-4">
+                                <div class="profile d-flex align-items-center mb-4 ">
+                                    <img src="$img_path$row[profile]" class="rounded-circle" loading="lazy" width="30px">
+                                    <h6 class="m-0 ms-2">$row[uname]</h6>
+                                </div>
+                                <p>
+                                   $row[review]
+                                </p>
+                                <div class="rating">
+                                    $stars
+                                </div>
+                            </div>
+
+                            slides;
+                        }
+                    }
+                ?>
 
 
             </div>
@@ -323,7 +328,7 @@
                         }
                         ?>
 
-                    <a href="<?php echo $contact_r['fb']; ?>" class="d-inline-block mb-2 "  target="_blank">
+                    <a href="<?php echo $contact_r['fb']; ?>" class="d-inline-block mb-2 " target="_blank">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-facebook me-1"></i>Facebook
                         </span>
@@ -361,7 +366,7 @@
                             <input type="hidden" name="token">
                         </div>
                         <div class="mb-2 text-end">
-    
+
                             <button type="button" class="btn shadow-none me-2" data-bs-dismiss="modal">
                                 Hủy bỏ
                             </button>
@@ -411,7 +416,7 @@
     <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-<script>
+    <script>
     var swiper = new Swiper(".swiper-container", {
         spaceBetween: 30,
         effect: "fade",
@@ -444,7 +449,7 @@
 
     let recovery_form = document.getElementById('recovery-form');
 
-    recovery_form.addEventListener('submit', (e)=>{
+    recovery_form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let data = new FormData();
@@ -465,20 +470,18 @@
 
 
         xhr.onload = function() {
-            if(this.responseText == 'failed'){
-                alert('error','Đặt lại tài khoản thất bại!');
-            }
-            else{
-                alert('success','Đặt lại tài khoản thành công');
+            if (this.responseText == 'failed') {
+                alert('error', 'Đặt lại tài khoản thất bại!');
+            } else {
+                alert('success', 'Đặt lại tài khoản thành công');
                 recovery_form.reset();
             }
         }
 
-            xhr.send(data); 
-            
-    });
+        xhr.send(data);
 
-</script>
+    });
+    </script>
 </body>
 
 </html>
