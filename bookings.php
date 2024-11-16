@@ -92,6 +92,7 @@
                     <h5 class='fw-bold'>{$data['room_name']}</h5>
                     <p>{$data['price']} VNĐ/đêm</p>
                     <p>
+                         <b>Số phòng: </b> {$data['room_no']} <br> 
                         <b>Ngày nhận: </b> $checkin <br> 
                         <b>Ngày trả: </b> $checkout
                     </p>

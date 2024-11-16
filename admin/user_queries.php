@@ -117,6 +117,7 @@
                                                 $seen = "<a href ='?seen=$row[sr_no]' class='btn btn-sm rounded-pill btn-primary'>Mark as read</a> <br>";
                                             }
                                             $seen.= "<a href ='?del=$row[sr_no]' class='btn btn-sm rounded-pill btn-danger mt-2'>Delete</a>";
+                                            $date =date('d-m-Y', strtotime($row['datetime']));
                                             echo<<<query
                                             <tr>
                                                 <td>$i</td>
@@ -124,7 +125,7 @@
                                                 <td>$row[email]</td>
                                                 <td>$row[subject]</td>
                                                 <td>$row[massage]</td>
-                                                <td>$row[date]</td>
+                                                <td>$date</td>
                                                 <td>$seen</td>
                                                 
                                             </tr>

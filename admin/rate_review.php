@@ -116,7 +116,7 @@
                                         
                                         while($row = mysqli_fetch_assoc($data))
                                         {
-                                            $date =date('d-m-Y',strtotime($row['datentime']));
+                                            $date =date('d-m-Y',strtotime($row['datetime']));
                                             
                                             $seen='';
                                             if($row['seen']!=1){
