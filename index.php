@@ -241,7 +241,7 @@
             <div class="swiper-wrapper mb-5">
 
                 <?php
-                $review_q ="SELECT rr.*,uc.name AS uname, r.name AS rname FROM `rating_review` rr
+                $review_q ="SELECT rr.*,uc.name AS uname, uc.profile, r.name AS rname FROM `rating_review` rr
                     INNER JOiN `user_cred` uc ON rr.user_id= uc.id
                     INNER JOIN `rooms` r ON rr.room_id = r.id
                     ORDER BY `sr_no` DESC LIMIT 6";
