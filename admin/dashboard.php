@@ -75,7 +75,7 @@
               <div class="col-md-3 mb-4">
                 <a href="user_queries.php" class="text-decoration-none">
                   <div class="card text-center text-info p-3">
-                    <h6>Truy vấn khách hàng</h6>
+                    <h6>Vấn đề khách hàng</h6>
                     <h1 class="mt-2 mb-0"><?php echo $unread_queries['count'] ?></h1>
                   </div> 
                 </a>

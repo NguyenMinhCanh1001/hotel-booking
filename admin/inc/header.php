@@ -44,7 +44,7 @@
                         <a class="nav-link text-white" href="users.php">Khách hàng</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="user_queries.php">Truy vấn Khách hàng</a>
+                        <a class="nav-link text-white" href="user_queries.php">Vấn đề Khách hàng</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="rooms.php">Phòng</a>
@@ -53,7 +53,7 @@
                         <a class="nav-link text-white" href="features_facilities.php">Tính năng và tiện nghi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="rate_review.php">Rating and Reviews</a>
+                        <a class="nav-link text-white" href="rate_review.php">Đánh giá & bình luận</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="carousel.php">Ảnh bìa</a>

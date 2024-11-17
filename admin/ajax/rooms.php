@@ -70,10 +70,10 @@ if (isset($_POST['get_all_rooms']))
     while($row = mysqli_fetch_assoc($res))
     {
         if($row['status']==1){
-            $status = "<button onclick='toggle_status($row[id], 0)' class='btn btn-primary btn-sm shadow-none'>Đầy</button>";
+            $status = "<button onclick='toggle_status($row[id], 0)' class='btn btn-primary btn-sm shadow-none'>Trống</button>";
         }
         else{
-            $status = "<button onclick='toggle_status($row[id], 1)' class='btn btn-warning btn-sm shadow-none'>Trống</button>";
+            $status = "<button onclick='toggle_status($row[id], 1)' class='btn btn-warning btn-sm shadow-none'>Hết</button>";
         }
 
         $data .="

@@ -165,7 +165,7 @@
 
             echo<<<area
               <div class=" mb-2">
-                <h6 class="mb-1">Số phòng
+                <h6 class="mb-1">Tầng
                 </h6>
                 <span class='badge rounded-pill bg-light text-dark text-wrap me-1 mb-1'>
                   $room_data[area]
@@ -202,7 +202,7 @@
                     <h5 class="mb-3">Đánh giá</h5>
                     <?php
                     
-                      $review_q ="SELECT rr.*,uc.name AS uname, r.name AS rname FROM `rating_review` rr
+                      $review_q ="SELECT rr.*,uc.name AS uname, uc.profile, r.name AS rname FROM `rating_review` rr
                       INNER JOiN `user_cred` uc ON rr.user_id= uc.id
                       INNER JOIN `rooms` r ON rr.room_id = r.id
                       WHERE rr.room_id = '$room_data[id]'

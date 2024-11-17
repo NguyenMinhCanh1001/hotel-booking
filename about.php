@@ -31,7 +31,7 @@
   <div class="container">
     <div class="row justify-content-between align-items-center ">
       <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-        <h3 class="mb-3">Lorem ipsum dolor sit amet.</h3>
+        <h3 class="mb-3">Leader Group 5</h3>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, commodi sunt ex aut dolores aliquam at explicabo fuga molestiae quam, rem quisquam laboriosam et quibusdam laudantium ipsum reprehenderit ab numquam.
         </p>

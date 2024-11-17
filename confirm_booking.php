@@ -181,7 +181,7 @@
                 pay_info.innerHTML = "Rất tiếc, không còn phòng trống vào ngày đó!";
             }
             else{
-                pay_info.innerHTML = "Số ngày: " + data.days + "<br> Tổng số tiền phải trả: " + data.payment + "VNĐ";
+              pay_info.innerHTML = "Số ngày: " + data.days + "<br> Tổng số tiền phải trả: " + parseInt(data.payment).toLocaleString('vi-VN') + " VNĐ";
                 pay_info.classList.replace('text-danger','text-dark');
                 booking_form.elements['pay_now'].removeAttribute('disabled')
             }

@@ -98,7 +98,7 @@
                                     <tr class="bg-dark text-light" >
                                         <th scope="col">#</th>
                                         <th scope="col">Tên phòng</th>
-                                        <th scope="col">Số phòng</th>
+                                        <th scope="col">Tầng</th>
                                         <th scope="col">Khách hàng</th>
                                         <th scope="col">Giá</th>
                                         <th scope="col">Chất lượng</th>
@@ -131,7 +131,7 @@
                                             <input type="text" name="name" class="form-control shadow-none" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label class="form-label fw-bold ">Số phòng</label>
+                                            <label class="form-label fw-bold ">Tầng</label>
                                             <input type="number" min="1" name="area" class="form-control shadow-none" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
@@ -218,7 +218,7 @@
                                             <input type="text" name="name" class="form-control shadow-none" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label class="form-label fw-bold ">Số phòng</label>
+                                            <label class="form-label fw-bold ">Tầng</label>
                                             <input type="number" min="1" name="area" class="form-control shadow-none" required>
                                         </div>
                                         <div class="col-md-6 mb-3">

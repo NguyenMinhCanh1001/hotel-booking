@@ -69,7 +69,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">;
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Ratings & Reviews</title>
+     <title>Đánh giá & bình luận</title>
      <?php require('inc/links.php'); ?>
  </head>
 
@@ -80,7 +80,7 @@
      <div class="container-fluid" id="main-content">
          <div class="row">
              <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-                 <h3 class="mb-4"> Ratings & Reviews</h3>
+                 <h3 class="mb-4">Đánh giá & bình luận</h3>
 
                  <div class="card border-0 shadow mb-4">
                      <div class="card-body">
