@@ -31,9 +31,9 @@
   <div class="container">
     <div class="row justify-content-between align-items-center ">
       <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-        <h3 class="mb-3">Leader Group 5</h3>
+        <h3 class="mb-3">Leader Group 3</h3>
         <p>
-        Nhóm trưởng của nhóm 5 là người giữ vai trò quan trọng trong việc định hướng và dẫn dắt đội ngũ nhân viên. Với nhiều năm kinh nghiệm trong lĩnh vực khách sạn, Nuyễn Minh Cảnh không chỉ sở hữu kiến thức chuyên môn sâu rộng mà còn có khả năng quản lý xuất sắc.
+        Nhóm trưởng của nhóm 3 là người giữ vai trò quan trọng trong việc định hướng và dẫn dắt đội ngũ nhân viên. Với nhiều năm kinh nghiệm trong lĩnh vực khách sạn, Nuyễn Minh Cảnh không chỉ sở hữu kiến thức chuyên môn sâu rộng mà còn có khả năng quản lý xuất sắc.
         </p>
       </div>
       <div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
