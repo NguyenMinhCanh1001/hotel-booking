@@ -59,7 +59,7 @@
     
         if (!in_array($img_mime, $valid_mime)) {
             return 'inv_img';
-        } else if (($image['size'] / (1024 * 1024)) > 2) {
+        } else if (($image['size'] / (1024 * 1024)) > 6) {
             return 'inv_size';
         } else {
             $ext = pathinfo($image['name'], PATHINFO_EXTENSION);

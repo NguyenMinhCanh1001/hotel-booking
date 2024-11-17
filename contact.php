@@ -17,9 +17,8 @@
         <h2 class="merienda-header text-center ">Liên hệ với khách sạn</h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia officia, dolorem et similique obcaecati
-            optio expedita vero veritatis?<br> Quasi dolores non officia quisquam incidunt explicabo, porro nemo ea
-            saepe reprehenderit.
+            Đội ngũ nhân viên của khách sạn luôn sẵn sàng phục vụ bạn 24/7. Hãy để chúng tôi đồng hành cùng bạn trong mọi hành trình và mang đến những trải nghiệm tuyệt vời nhất!<br>
+            Nếu bạn cần đặt phòng hoặc có bất kỳ thắc mắc nào, đừng ngần ngại liên hệ với chúng tôi qua các kênh sau
         </p>
     </div>
 

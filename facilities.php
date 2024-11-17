@@ -24,9 +24,7 @@
         <h2 class="merienda-header text-center "> Cơ sở vật chất của khách sạn </h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia officia, dolorem et similique obcaecati
-            optio expedita vero veritatis?<br> Quasi dolores non officia quisquam incidunt explicabo, porro nemo ea
-            saepe reprehenderit.
+            Khách sạn chúng tự hào sở hữu hệ thống cơ sở vật chất đáp ứng mọi nhu cầu của khách hàng.
         </p>
     </div>
 

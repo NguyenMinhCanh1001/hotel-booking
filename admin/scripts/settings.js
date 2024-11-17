@@ -194,7 +194,7 @@
             if (this.responseText == 'inv_img') {
                 alert('error', 'Chỉ cho phép hình ảnh JPG và PNG!');
             } else if (this.responseText == 'inv_size') {
-                alert('error', 'Hình ảnh phải nhỏ hơn 2MB!');
+                alert('error', 'Hình ảnh phải nhỏ hơn 6MB!');
             } else if (this.responseText == 'upd_failed') {
                 alert('error', 'Tải hình ảnh lên không thành công. Máy chủ ngừng hoạt động!');
             } else {

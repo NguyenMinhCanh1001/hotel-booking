@@ -4,7 +4,6 @@
       <h3 class="merienda-header fs-3 mb-2"><?php echo $settings_r['site_title'] ?></h3>
       <p>
         <?php echo $settings_r['site_about'] ?>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, excepturi laboriosam? Nulla ex, corporis quis dolores esse, totam nisi cum iusto odio aspernatur ipsa eos ducimus corrupti quod, quos suscipit.
       </p>
     </div>
     <div class="col-lg-4 p-4">

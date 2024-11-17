@@ -24,7 +24,7 @@
     <h2 class="merienda-header text-center ">Giới thiệu về khách sạn</h2>
     <div class="h-line bg-dark"></div>
     <p class="text-center mt-3">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia officia, dolorem et similique obcaecati optio expedita vero veritatis?<br> Quasi dolores non officia quisquam incidunt explicabo, porro nemo ea saepe reprehenderit.
+    Thành công của [Tên khách sạn] được xây dựng từ sự tận tâm và chuyên nghiệp của đội ngũ nhân viên. <br>Chúng tôi tự hào sở hữu những thành viên giàu kinh nghiệm trong lĩnh vực khách sạn, từ bộ phận lễ tân thân thiện, đội ngũ phục vụ chu đáo đến các chuyên gia ẩm thực tài hoa.
     </p>
   </div>
 
@@ -33,7 +33,7 @@
       <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
         <h3 class="mb-3">Leader Group 5</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, commodi sunt ex aut dolores aliquam at explicabo fuga molestiae quam, rem quisquam laboriosam et quibusdam laudantium ipsum reprehenderit ab numquam.
+        Nhóm trưởng của nhóm 5 là người giữ vai trò quan trọng trong việc định hướng và dẫn dắt đội ngũ nhân viên. Với nhiều năm kinh nghiệm trong lĩnh vực khách sạn, Nuyễn Minh Cảnh không chỉ sở hữu kiến thức chuyên môn sâu rộng mà còn có khả năng quản lý xuất sắc.
         </p>
       </div>
       <div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
