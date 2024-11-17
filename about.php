@@ -24,7 +24,7 @@
     <h2 class="merienda-header text-center ">Giới thiệu về khách sạn</h2>
     <div class="h-line bg-dark"></div>
     <p class="text-center mt-3">
-    Thành công của [Tên khách sạn] được xây dựng từ sự tận tâm và chuyên nghiệp của đội ngũ nhân viên. <br>Chúng tôi tự hào sở hữu những thành viên giàu kinh nghiệm trong lĩnh vực khách sạn, từ bộ phận lễ tân thân thiện, đội ngũ phục vụ chu đáo đến các chuyên gia ẩm thực tài hoa.
+    Thành công của được xây dựng từ sự tận tâm và chuyên nghiệp của đội ngũ nhân viên. <br>Chúng tôi tự hào sở hữu những thành viên giàu kinh nghiệm trong lĩnh vực khách sạn, từ bộ phận lễ tân thân thiện, đội ngũ phục vụ chu đáo đến các chuyên gia ẩm thực tài hoa.
     </p>
   </div>
 
